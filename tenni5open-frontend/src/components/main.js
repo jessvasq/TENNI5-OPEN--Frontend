@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import CreateMatch from './createForm';
 import MatchIndex from './matchIndex';
 import ShowMatch from './ShowMatch';
+import Login from './user/Login';
+import Logout from './user/Logout';
 
 function Main (props) {
 
@@ -31,7 +33,7 @@ function Main (props) {
         try{
             //make an HTTP POST request to our backend
             await fetch (URL, {
-                method: 'POST', 
+                method: "POST", 
                 headers: {
                     'Content-Type': "application/json"
                 },
@@ -50,7 +52,19 @@ function Main (props) {
 
     //UPDATE
 
-
+    const updateMatch= async (match, id) => {
+        // make post request to create Match
+        await fetch(URL + id, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: 'include',
+          body: JSON.stringify(match),
+        });
+        // update list of Match
+        getMatch();
+      };
 
     //DELETE 
 
@@ -64,8 +78,10 @@ function Main (props) {
         <div>
           <Routes>
            <Route path='/tenni5open/' element={<MatchIndex matches={match} />}/>
-           <Route path='/tenni5open/create' element={<CreateMatch createMatch={createMatch} />}/>
+           <Route path='/tenni5open/create' element={<CreateMatch matches={match} createMatch={createMatch} updateMatch={updateMatch}/>}/>
            <Route path='/tenni5open/:id' element={<ShowMatch matches={match}/>}/>
+           <Route path='/user/login' element={<Login />}/>
+           <Route path='/user/logout' element={<Logout/>}/>
           </Routes>
         </div>
       )
