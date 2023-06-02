@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom'
-import MatchIndex from './matchIndex'
+import CreateMatch from './createForm';
+import MatchIndex from './matchIndex';
+import ShowMatch from './ShowMatch';
 
 function Main (props) {
 
@@ -25,7 +27,26 @@ function Main (props) {
 
 
     //CREATE
-  
+    const createMatch = async (match) => {
+        try{
+            //make an HTTP POST request to our backend
+            await fetch (URL, {
+                method: 'POST', 
+                headers: {
+                    'Content-Type': "application/json"
+                },
+                //specifies the credentials to include when making the request. We want to include user credentials "cookies" in the request . The server will then verify the credentials, provide access to this route and process this request. 
+                credentials: 'include',
+                body: JSON.stringify(match)
+            });
+            //update list of available matches after match is created
+            getMatch()
+        }
+        catch (error) {
+            console.log('Error:', error);
+        }
+      }
+    
 
     //UPDATE
 
@@ -42,7 +63,9 @@ function Main (props) {
     return (
         <div>
           <Routes>
-           <Route path='/tenni5open' element={<MatchIndex matches={match}/>}/>
+           <Route path='/tenni5open/' element={<MatchIndex matches={match} />}/>
+           <Route path='/tenni5open/create' element={<CreateMatch createMatch={createMatch} />}/>
+           <Route path='/tenni5open/:id' element={<ShowMatch matches={match}/>}/>
           </Routes>
         </div>
       )
