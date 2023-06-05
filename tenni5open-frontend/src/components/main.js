@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom'
+import Home from './home';
 import CreateMatch from './createForm';
 import MatchIndex from './matchIndex';
 import ShowMatch from './ShowMatch';
@@ -98,6 +99,7 @@ function Main (props) {
     return (
         <div>
           <Routes>
+          <Route path='/tenni5open/home' element={<Home />}/>
            <Route path='/tenni5open/' element={<MatchIndex matches={match} />}/>
            <Route path='/tenni5open/create' element={<CreateMatch matches={match} createMatch={createMatch}/>}/>
            <Route path='/tenni5open/:id' element={<ShowMatch matches={match} updateMatch={updateMatch} deleteMatch={deleteMatch}/>}/>

@@ -7,6 +7,7 @@ function MatchIndex(props) {
     return (props.matches.map((match) => (
       <div key={match.id}>
       <Link to={`/tenni5open/${match.id}`}> 
+        <img src={match.image}/>
         <h1>{match.description} , {match.location}</h1> 
       </Link>
 

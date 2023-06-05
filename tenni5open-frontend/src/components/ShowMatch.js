@@ -57,7 +57,7 @@ return (
   <form onSubmit={handleSubmit}>
         Location: <input type="text" value={updateForm.location} name="location" placeholder="location" onChange={handleChange} />
         Description: <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
-        Date: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
+        Date & Time: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
         Players: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
         Price: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
         <input type="submit" value="Update Match"/>

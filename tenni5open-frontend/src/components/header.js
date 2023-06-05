@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <nav>
-        <Link to='/tenni5open'>
+        <Link to='/tenni5open/home'>
             <h1>HOME</h1>
+        </Link>
+        <Link to='/tenni5open'>
+            <h1>Matches</h1>
         </Link>
         <Link to='/user/login'>
             <h1>Login</h1>
