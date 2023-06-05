@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import CreateMatch from './createForm';
 import MatchIndex from './matchIndex';
 import ShowMatch from './ShowMatch';
+import Register from './user/register';
 import Login from './user/Login';
 import Logout from './user/Logout';
 
@@ -100,6 +101,7 @@ function Main (props) {
            <Route path='/tenni5open/' element={<MatchIndex matches={match} />}/>
            <Route path='/tenni5open/create' element={<CreateMatch matches={match} createMatch={createMatch}/>}/>
            <Route path='/tenni5open/:id' element={<ShowMatch matches={match} updateMatch={updateMatch} deleteMatch={deleteMatch}/>}/>
+           <Route path='/user/register' element={<Register/>}/>
            <Route path='/user/login' element={<Login />}/>
            <Route path='/user/logout' element={<Logout/>}/>
           </Routes>

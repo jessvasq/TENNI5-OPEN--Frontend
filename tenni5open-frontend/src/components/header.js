@@ -14,6 +14,9 @@ function Header() {
         <Link to='/user/logout'>
             <h1>Logout</h1>
         </Link>
+        <Link to='/user/register'>
+            <h1>Register</h1>
+        </Link>
     </nav>
   )
 }
