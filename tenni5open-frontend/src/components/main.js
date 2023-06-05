@@ -35,7 +35,7 @@ function Main (props) {
             await fetch (URL, {
                 method: "POST", 
                 headers: {
-                    'Content-Type': "application/json"
+                    'Content-Type': "application/json" //indicates that the request body is in JSON
                 },
                 //specifies the credentials to include when making the request. We want to include user credentials "cookies" in the request . The server will then verify the credentials, provide access to this route and process this request. 
                 credentials: 'include',
@@ -50,23 +50,43 @@ function Main (props) {
       }
     
 
-    //UPDATE
+    //UPDATE  *****FIX THIS******
 
-    const updateMatch= async (match, id) => {
-        // make post request to create Match
-        await fetch(URL + id, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: 'include',
-          body: JSON.stringify(match),
-        });
-        // update list of Match
-        getMatch();
+    const updateMatch = async (match, id) => {
+        // make PUT request to update match 
+        try {
+          await fetch(URL + id, {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            credentials: 'include',
+            body: JSON.stringify(match),
+          });
+         // update list
+         getMatch();
+      }
+        catch (error) {
+          console.log('Error:', error)
+        }
       };
 
-    //DELETE 
+    //DELETE  *****FIX THIS******
+    
+    const deleteMatch = async (id) => {
+      //make delete requeste to delete a match
+      try {
+        await fetch (URL + id, {
+          method: 'DELETE', 
+          credentials: 'include', 
+        });
+      getMatch();
+      }
+    catch (error) {
+      console.log('Error:', error)
+      };
+    };
+
 
     //useEffect
     useEffect(() => {
@@ -78,8 +98,8 @@ function Main (props) {
         <div>
           <Routes>
            <Route path='/tenni5open/' element={<MatchIndex matches={match} />}/>
-           <Route path='/tenni5open/create' element={<CreateMatch matches={match} createMatch={createMatch} updateMatch={updateMatch}/>}/>
-           <Route path='/tenni5open/:id' element={<ShowMatch matches={match}/>}/>
+           <Route path='/tenni5open/create' element={<CreateMatch matches={match} createMatch={createMatch}/>}/>
+           <Route path='/tenni5open/:id' element={<ShowMatch matches={match} updateMatch={updateMatch} deleteMatch={deleteMatch}/>}/>
            <Route path='/user/login' element={<Login />}/>
            <Route path='/user/logout' element={<Logout/>}/>
           </Routes>
@@ -87,4 +107,4 @@ function Main (props) {
       )
     };
 
-export default Main
+export default Main;

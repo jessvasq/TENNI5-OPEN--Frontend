@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Footer () {
   return (
-    <div>
-     Footer component
-    </div>
+    <>
+    <Link to='/tenni5open/create'>
+      <h1>Create</h1>
+    </Link>
+    </>
   )
 }
 

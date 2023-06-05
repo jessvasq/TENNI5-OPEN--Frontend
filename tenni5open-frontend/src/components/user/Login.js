@@ -72,7 +72,7 @@ return (
       onChange={handleChange}
     />
     <input
-      type="text"
+      type="password"
       value={loginForm.password}
       name="password"
       placeholder="password"
