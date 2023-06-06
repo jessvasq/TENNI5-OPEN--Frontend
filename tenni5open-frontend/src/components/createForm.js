@@ -17,7 +17,7 @@ function CreateForm(props) {
     //redirect to index once logged in 
 
     const redirectPage = () => {
-        window.location.href = '/tenni5open'
+        window.location.href = '/tenni5open/matches'
     }
 
 

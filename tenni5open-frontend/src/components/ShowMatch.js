@@ -36,7 +36,7 @@ const match = matches.find((p) => p.id === Number(id));
   const removeMatch = (event) => {
     event.preventDefault()
     props.deleteMatch(match.id);
-    navigate("/tenni5open/")
+    navigate("/tenni5open/matches")
   }
  
 return ( 

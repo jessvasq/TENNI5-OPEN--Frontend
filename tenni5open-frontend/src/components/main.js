@@ -100,9 +100,9 @@ function Main (props) {
         <div>
           <Routes>
           <Route path='/tenni5open/home' element={<Home />}/>
-           <Route path='/tenni5open/' element={<MatchIndex matches={match} />}/>
+           <Route path='/tenni5open/matches' element={<MatchIndex matches={match} />}/>
            <Route path='/tenni5open/create' element={<CreateMatch matches={match} createMatch={createMatch}/>}/>
-           <Route path='/tenni5open/:id' element={<ShowMatch matches={match} updateMatch={updateMatch} deleteMatch={deleteMatch}/>}/>
+           <Route path='/tenni5open/matches/:id' element={<ShowMatch matches={match} updateMatch={updateMatch} deleteMatch={deleteMatch}/>}/>
            <Route path='/user/register' element={<Register/>}/>
            <Route path='/user/login' element={<Login />}/>
            <Route path='/user/logout' element={<Logout/>}/>
