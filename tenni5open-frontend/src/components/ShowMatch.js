@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {useParams, useNavigate } from "react-router-dom" 
- 
 
 function ShowMatch(props) {
 
@@ -15,7 +14,8 @@ const match = matches.find((p) => p.id === Number(id));
 ///////////
 
   //set state
-  const [updateForm, setUpdateForm] = useState(match);
+  const [updateForm, setUpdateForm] = useState('');
+  const [showupdateForm, setShowUpdateForm] = useState(false);
 
   const handleChange = (event) => {
       setUpdateForm({ ...updateForm, [event.target.name]: event.target.value });
@@ -31,6 +31,17 @@ const match = matches.find((p) => p.id === Number(id));
       price: updateForm.price, 
     }
     props.updateMatch(payload, match.id); //invoke updateMatch passed as a prop, and passes the payload object and the 'id' as arguments. 
+  }
+
+
+  const editMatch = (event) => {
+    event.preventDefault()
+    setShowUpdateForm(true)
+  }
+
+  const handleClose = (event) => {
+    event.preventDefault()
+    setShowUpdateForm(false);
   }
 
   const removeMatch = (event) => {
@@ -53,17 +64,20 @@ return (
   <button id="delete" onClick={removeMatch}>Delete</button>
 
 
-  <h1>Update Match</h1>
-  <form onSubmit={handleSubmit}>
-        Location: <input type="text" value={updateForm.location} name="location" placeholder="location" onChange={handleChange} />
-        Description: <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
-        Date & Time: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
-        Players: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
-        Price: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
-        <input type="submit" value="Update Match"/>
-  </form>
+  <button id="update" onClick={editMatch}>Update</button>
+    {/* {showupdateForm && <UpdateForm matches={match} updateMatch={props.updateMatch} />} */}
+    {showupdateForm && 
+        <form onSubmit={handleSubmit}>
+          Location: <input type="text" value={updateForm.location} name="location" placeholder="location" onChange={handleChange} />
+          Description: <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
+          Date & Time: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
+          Players: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
+          Price: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
+          <input type="submit" value="Update Match"/>
+          <button onClick={handleClose}>X</button>
+        </form> 
+    }
 </div>
-
 ); 
 } 
 
