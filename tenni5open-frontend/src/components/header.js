@@ -11,9 +11,6 @@ function Header() {
         <Link to='/tenni5open/matches'>
             <h1>Matches</h1>
         </Link>
-        <Link to='/tenni5open/update'>
-            <h1>Update</h1>
-        </Link>
         <Link to='/user/login'>
             <h1>Login</h1>
         </Link>
@@ -22,6 +19,10 @@ function Header() {
         </Link>
         <Link to='/user/register'>
             <h1>Register</h1>
+        </Link>
+        {/* /////MY MATCHES// */}
+        <Link to='/tenni5open/mymatches'>
+            <h1>My Matches</h1>
         </Link>
     </nav>
   )

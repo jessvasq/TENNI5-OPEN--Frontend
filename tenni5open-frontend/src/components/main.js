@@ -8,6 +8,10 @@ import Register from './user/register';
 import Login from './user/Login';
 import Logout from './user/Logout';
 
+//MY MATCHES//
+import MyMatchesIndex from './myMatches/MyMatches';
+import ShowMyMatch from './myMatches/showMyMatch';
+
 function Main (props) {
 
     const [ match, setMatch ] = useState([]);
@@ -18,7 +22,9 @@ function Main (props) {
     const getMatch = async () => {
         try{
             //make an HTTP GET request to our backend
-            const response = await fetch (URL)
+            const response = await fetch (URL, {
+              credentials: 'include',
+            } )
             const data = await response.json();
             //sets the value of data to setMatch (saving the data in state)
             setMatch(data.data);
@@ -90,9 +96,63 @@ function Main (props) {
     };
 
 
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///  MY MATCHES  ///
+
+  const URL1 = 'http://localhost:8000/tenni5open/mymatches'
+
+  const [ myMatch, setMyMatch ] = useState([]);
+
+  //INDEX
+  const getMyMatch = async () => {
+    try{
+        //make an HTTP GET request to our backend
+        const response = await fetch (URL1, {
+          credentials: 'include',
+        } 
+          )
+        const data = await response.json();
+        //sets the value of data to setMatch (saving the data in state)
+        setMyMatch(data.data);
+        console.log(data.data);
+        
+    }
+    catch (error) {
+        console.log('Error:', error);
+    }
+}
+
+  //ADD
+
+  const addMatch = async (myMatch) => {
+          try{
+              //make an HTTP POST request to our backend
+              await fetch (URL1, {
+                  method: "POST", 
+                  headers: {
+                      'Content-Type': "application/json" //indicates that the request body is in JSON
+                  },
+                  //specifies the credentials to include when making the request. We want to include user credentials "cookies" in the request . The server will then verify the credentials, provide access to this route and process this request. 
+                  credentials: 'include',
+                  body: JSON.stringify(myMatch)
+              });
+              //update list of available matches after match is created
+              getMyMatch()
+          }
+          catch (error) {
+              console.log('Error:', error);
+          }
+        }
+    
+  
+
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     //useEffect
     useEffect(() => {
         getMatch();
+        ///My matches//
+        getMyMatch();
     }, []);
   
 
@@ -102,10 +162,14 @@ function Main (props) {
            <Route path='/tenni5open/home' element={<Home />}/>
            <Route path='/tenni5open/matches' element={<MatchIndex matches={match} />}/>
            <Route path='/tenni5open/create' element={<CreateMatch matches={match} createMatch={createMatch}/>}/>
-           <Route path='/tenni5open/matches/:id' element={<ShowMatch matches={match} updateMatch={updateMatch} deleteMatch={deleteMatch}/>}/>
+           <Route path='/tenni5open/matches/:id' element={<ShowMatch matches={match} updateMatch={updateMatch} deleteMatch={deleteMatch} addMatch={addMatch}/>}/>
            <Route path='/user/register' element={<Register/>}/>
            <Route path='/user/login' element={<Login />}/>
            <Route path='/user/logout' element={<Logout/>}/>
+
+           {/* MY MATCHES */}
+           <Route path='/tenni5open/mymatches' element={<MyMatchesIndex matches={myMatch} />}/>
+           <Route path='/tenni5open/mymatches/:id' element={<ShowMyMatch matches={myMatch} />}/>
           </Routes>
         </div>
       )
