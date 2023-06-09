@@ -73,6 +73,7 @@ function Main (props) {
           });
          // update list
          getMatch();
+         getMyMatch();
       }
         catch (error) {
           console.log('Error:', error)
@@ -82,13 +83,14 @@ function Main (props) {
     //DELETE  *****FIX THIS******
     
     const deleteMatch = async (id) => {
-      //make delete requeste to delete a match
+      //make delete request to delete a match
       try {
         await fetch (URL + id, {
           method: 'DELETE', 
           credentials: 'include', 
         });
       getMatch();
+      getMyMatch();
       }
     catch (error) {
       console.log('Error:', error)
@@ -143,8 +145,46 @@ function Main (props) {
               console.log('Error:', error);
           }
         }
+
+
+  //DELETE  
     
+    const deleteMyMatch = async (id) => {
+      //make delete requeste to delete a match
+      try {
+        await fetch (URL1 + id, {
+          method: 'DELETE', 
+          credentials: 'include', 
+        });
+      getMyMatch();
+      }
+    catch (error) {
+      console.log('Error:', error)
+      };
+    };
+
+
   
+    //UPDATE  
+
+    const updateMyMatch = async (myMatch, id) => {
+      // make PUT request to update match 
+      try {
+        await fetch(URL1 + id, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: 'include',
+          body: JSON.stringify(myMatch),
+        });
+       // update list
+       getMatch();
+    }
+      catch (error) {
+        console.log('Error:', error)
+      }
+    };
 
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -169,7 +209,7 @@ function Main (props) {
 
            {/* MY MATCHES */}
            <Route path='/tenni5open/mymatches' element={<MyMatchesIndex matches={myMatch} />}/>
-           <Route path='/tenni5open/mymatches/:id' element={<ShowMyMatch matches={myMatch} />}/>
+           <Route path='/tenni5open/mymatches/:id' element={<ShowMyMatch matches={myMatch} updateMatch={updateMatch} deleteMatch={deleteMatch} />}/>
           </Routes>
         </div>
       )

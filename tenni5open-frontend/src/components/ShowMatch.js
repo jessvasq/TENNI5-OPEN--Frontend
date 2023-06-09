@@ -30,7 +30,7 @@ const match = matches.find((p) => p.id === Number(id));
       players: updateForm.players, 
       price: updateForm.price, 
     }
-    props.addMatch(payload, match.id); //invoke updateMatch passed as a prop, and passes the payload object and the 'id' as arguments. 
+    props.updateMatch(payload, match.id); //invoke updateMatch passed as a prop, and passes the payload object and the 'id' as arguments. 
   }
 
   const editMatch = (event) => {
@@ -42,7 +42,7 @@ const match = matches.find((p) => p.id === Number(id));
 
 ////////MY MATCHES
   //set state
-  const [addForm, setAddForm] = useState('');
+  const [addForm, setAddForm] = useState(match);
   const [showAddForm, setShowAddForm] = useState(false);
 
   const addM = (event) => {
@@ -51,16 +51,17 @@ const match = matches.find((p) => p.id === Number(id));
 
   const handleAdd = (event) => {
     event.preventDefault() //ensures that the form data is handled within the function without trigerring a pag
-    const {image, host_name, location, description, date, players, skill_level, price} = addForm
+    const { image, host_name, location, username, description, date, players, skill_level, price } = addForm
     const payload = {  //We need to create a new object and assign the values from updateForm to these properties 
-      image: "image",
-      host_name: "host_name",
-      location: "location", 
-      description: "description",
-      date: "date",
-      players: "players", 
-      skill_level: "skill_level",
-      price: "price", 
+      image: image,
+      // host_name: host_name,
+      location: location, 
+      username: username,
+      description: description,
+      date: date,
+      players: players, 
+      skill_level: skill_level,
+      price: price, 
     }
     props.addMatch(payload, match.id) //invoke updateMatch passed as a prop, and passes the payload object and the 'id' as arguments. 
     navigate('/tenni5open/mymatches')
@@ -94,6 +95,7 @@ return (
   <img src={match.image} /> 
   <h2>Description: {match.description}</h2> 
   <h2>Host: {match.host_name.username}</h2> 
+  {/* <h2>Username: {match.username}</h2>  */}
   <h2>Date: {match.date}</h2> 
   <h2>Players:{match.players}</h2> 
   <h2>Skill level:{match.skill_level}</h2> 
@@ -118,14 +120,15 @@ return (
   <button id="add" onClick={showAdd}>Add</button>
     {showAddForm && 
       <form onSubmit={handleAdd}>
-          <input type="text" value={match.image} name="image" placeholder="image" onChange={handleChange} />
+          {/* <input type="text" value={match.image} name="image" placeholder="image" onChange={handleChange} />
           <input type="text" value={match.host_name.username} name="host_name" placeholder="host_name" onChange={handleChange} />
           <input type="text" value={match.skill_level} name="skill_level" placeholder="skill_level" onChange={handleChange} />
           Location: <input type="text" value={match.location} name="location" placeholder="location" onChange={handleChange} />
           Description: <input type="text" value={match.description} name="description" placeholder="description" onChange={handleChange} />
           Date & Time: <input type="text" value={match.date} name="date" placeholder="date" onChange={handleChange} />
           Players: <input type="text" value={match.players} name="players" placeholder="players" onChange={handleChange} />
-          Price: $<input type="text" value={match.price} name="price" placeholder="price" onChange={handleChange} />
+          Price: $<input type="text" value={match.price} name="price" placeholder="price" onChange={handleChange} /> */}
+      Check to add: <input type="checkbox" value={match.is_in_my_matches} name="is_in_my_matches" placeholder="Match's is_in_my_matches" onChange={handleChange} />
       <input type="submit" value="Confirm" />
     </form>
   }

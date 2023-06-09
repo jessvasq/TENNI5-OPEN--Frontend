@@ -8,6 +8,7 @@ function CreateForm(props) {
         description: "",
         location: "",
         date: "",
+        username: "",
         host_name: "",
         players: "",
         skill_level: "",
@@ -33,6 +34,7 @@ function CreateForm(props) {
             description: "",
             location: "",
             date: "",
+            username: "",
             host_name: "",
             players: "",
             skill_level: "",
@@ -51,10 +53,12 @@ function CreateForm(props) {
        <input type="text" value={newForm.description} name="description" placeholder="description" onChange={handleChange} />
        <input type="text" value={newForm.location} name="location" placeholder="location" onChange={handleChange} />
        <input type="text" value={newForm.date} name="date" placeholder="date" onChange={handleChange} />
+       <input type="text" value={newForm.username} name="username" placeholder="username" onChange={handleChange} />
        <input type="text" value={newForm.host_name} name="host_name" placeholder="Your name" onChange={handleChange} />
        <input type="text" value={newForm.players} name="players" placeholder="Number of players" onChange={handleChange} />
        <input type="text" value={newForm.skill_level} name="skill_level" placeholder="i.e.; beginner, pro," onChange={handleChange} />
        <input type="text" value={newForm.price} name="price" placeholder="Match's price" onChange={handleChange} />
+       {/* My Matches: <input type="checkbox" value={newForm.is_in_my_matches} name="is_in_my_matches" placeholder="Match's is_in_my_matches" onChange={handleChange} /> */}
 
        <input type="submit" value="Create Match" />
     </form>

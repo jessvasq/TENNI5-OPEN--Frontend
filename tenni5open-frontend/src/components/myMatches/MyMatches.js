@@ -28,7 +28,7 @@ const filteredMatch = props.matches.filter((myMatch) => { //filter() iterates ov
       <div key={myMatch.id} >
         <Link to={`/tenni5open/mymatches/${myMatch.id}`}> 
           <img src={myMatch.image}/>
-          <h1>{myMatch.description} , {myMatch.location}</h1> 
+          <h1>{myMatch.description} , {myMatch.location}, {myMatch.username}</h1> 
         </Link>
       </div>
     ));
