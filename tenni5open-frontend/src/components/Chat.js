@@ -137,14 +137,6 @@ const handleSubmit = (event) => {
 }
 
 
-/////////SHOW CHAT//////
-const [ShowChat, setShowChat] = useState(false);
-
-const ShowChats = (event) => {
-    event.preventDefault()
-    setShowChat(true)
-  }
-
 
 
 //useEffect
@@ -159,6 +151,10 @@ const ShowChats = (event) => {
 return (
     <>
 <div>
+    <h1>New CHAT</h1>
+           <input type="text" value={NewFormChat.name} name="name" placeholder="New Chat" onChange={handleChange} />
+           <button onClick={handleSubmit}> + New Chat </button>
+
     <div>
         Search: <input type="text" value={conversationId}  placeholder="conversation id" onChange={handleChangeConvo}/>
         <button onClick={handleOnClick}> SEARCH </button>
@@ -168,6 +164,7 @@ return (
             <>
             {text.map((text) => (
              <div key={text.id}>
+              {text.user.username} <br/>
               {text.message}
                 </div>
         ))}
@@ -182,10 +179,9 @@ return (
                 
     </div>
 
-    <h1>New CHAT</h1>
+    {/* <h1>New CHAT</h1>
            <input type="text" value={NewFormChat.name} name="name" placeholder="New Chat" onChange={handleChange} />
-           <button onClick={handleSubmit}> + New Chat </button>
-
+           <button onClick={handleSubmit}> + New Chat </button> */}
     <div>
       
 
@@ -199,52 +195,3 @@ return (
 };
 
 export default Chat;
-//   return (
-   
-//     <div>
-//         <div>
-//             Search: <input type="text" value={conversationId}  placeholder="conversation id" onChange={handleSearch}/>
-//             <button onClick={handleSubmitSearch}> SEARCH </button>
-
-
-
-
-
-//             </div>
-
-
-
-//     </div>
-//     <div>
-//     {conversationId && (
-       
-//         {messages.map((message) => (
-//             <div key={text.id}>
-//                 {text.message}
-//                 </div>
-//              ))}
-        
-//     </div>
-//         <div>
-//         <h1>Send Text</h1>
-//             <input type="text" value={newText.message} name="message" placeholder="type your message" onChange={handleChangeText} />
-//             <input type="text" value={newText.conversation} name="conversation" placeholder="conversation id" onChange={handleChangeText} />
-//             <button onClick={handleSubmitText}> SEND </button>
-//         </div>
-//     )}
-
-
-
-//         <Routes>
-//         <Route path='/chat' element={<NewMessage sendText={sendText} />}/>
-//         <Route path='/chat/newmessage' element={<NewChats createConvo={createConvo} sendText={sendText} texts={text} getText={getText}/>}/>
-//         <Route path='/chat/:id' element={<ShowChat texts={text}/>}/>
-//         </Routes>
-    
-
-
-//   )
-// };
-
-// export default Chat;
-

@@ -1,6 +1,7 @@
 import React from 'react'
 import {useParams, useNavigate } from "react-router-dom" 
 import { useState, useEffect } from 'react'
+import Chat from '../Chat'
 
 function ShowMyMatch(props) {
 
@@ -15,6 +16,7 @@ const myMatch = matches.find((p) => p.id === Number(id));
 //set state
  const [updateForm, setUpdateForm] = useState(myMatch);
  const [showupdateForm, setShowUpdateForm] = useState(false);
+ const [showContactForm, setShowContactForm] = useState(false);
 
  const handleChange = (event) => {
      setUpdateForm({ ...updateForm, [event.target.name]: event.target.value });
@@ -49,6 +51,15 @@ const myMatch = matches.find((p) => p.id === Number(id));
     navigate("/tenni5open/mymatches")
   }
  
+  const openChat = (event) => {
+    event.preventDefault()
+    setShowContactForm(true)
+  }
+  const closeChat = (event) => {
+    event.preventDefault()
+    setShowContactForm(false);
+  }
+
 return ( 
 
 <div className="match"> 
@@ -77,6 +88,12 @@ return (
         </form> 
     }
 
+
+<button id="chat" onClick={openChat}>Contact Host</button>
+   {showContactForm && 
+    <Chat /> 
+   }
+  <button onClick={closeChat}>X</button>
 {/* 
 //   <button id="add" onClick={showAdd}>Add</button>
 //     {showAddForm && 
