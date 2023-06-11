@@ -47,8 +47,10 @@ function Chat() {
                 const conversationId = responseData.data.id;
                 const conversationName = responseData.data.name;
                 console.log(conversationName)
-                console.log(conversationId)
-                 //update list of available matches after match is created
+                console.log("Your chat reference number" + conversationId)
+                //conversation id is stored in the conversationId using state
+                setConversationId(conversationId)
+               //update previous messages
                 getText(conversationId)
             }
            
@@ -152,12 +154,24 @@ return (
     <>
 <div>
     <h1>New CHAT</h1>
+            {!conversationId && (
+            <div>
            <input type="text" value={NewFormChat.name} name="name" placeholder="New Chat" onChange={handleChange} />
            <button onClick={handleSubmit}> + New Chat </button>
+            </div>
+           )}
+
+           {/* {conversationId && (
+            <div>
+                <h2>Keep this number for your records: </h2>
+                {conversationId}
+            </div>
+           )} */}
 
     <div>
-        Search: <input type="text" value={conversationId}  placeholder="conversation id" onChange={handleChangeConvo}/>
-        <button onClick={handleOnClick}> SEARCH </button>
+        View Message: <br/>
+        <input type="text" value={conversationId}  placeholder="Reference Number" onChange={handleChangeConvo}/>
+        <button onClick={handleOnClick}> Search </button>
     </div>
     
         {conversationId && ( 
@@ -172,10 +186,10 @@ return (
             </>
          )}
     <div>
-        <h1>Send Text</h1>
+        <h1>New Message</h1>
         <input type="text" value={newText.message} name="message" placeholder="type your message" onChange={handleChangeText} />
-        <input type="text" value={newText.conversation} name="conversation" placeholder="conversation id" onChange={handleChangeText} />
-        <button onClick={handleSubmitText}> SEND </button>
+        <input type="text" value={newText.conversation} name="conversation" placeholder="Enter Reference Number" onChange={handleChangeText} />
+        <button onClick={handleSubmitText}> Send </button>
                 
     </div>
 

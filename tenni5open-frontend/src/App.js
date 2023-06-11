@@ -3,7 +3,7 @@ import './App.css';
 import Main from './components/main';
 import Header from './components/header';
 import Footer from './components/footer';
-// import Chat from './components/Chat';
+import Videos from './components/videoPage/videos';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <Main />   
       <Footer /> 
-      {/* <Chat />  */}
+      <Videos />
     </div>
   );
 }
