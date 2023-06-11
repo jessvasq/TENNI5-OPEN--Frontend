@@ -7,9 +7,6 @@ import ShowVideos from './showVideos';
 ///VIDEO PAGE 
 
 
-//////DOUBLE CHECK/////
-
-
 function Videos (props) {
 
     const URL = 'http://localhost:8000/tutorials/'

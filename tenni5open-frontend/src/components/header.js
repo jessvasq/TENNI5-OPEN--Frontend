@@ -27,6 +27,9 @@ function Header() {
         <Link to='/tutorials'>
             <h1>Tutorials</h1>
         </Link>
+        <Link to='/equipment'>
+            <h1>Equipment</h1>
+        </Link>
     </nav>
   )
 }

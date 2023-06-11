@@ -4,6 +4,7 @@ import Main from './components/main';
 import Header from './components/header';
 import Footer from './components/footer';
 import Videos from './components/videoPage/videos';
+import Equipment from './components/equipment/equipment';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Main />   
       <Footer /> 
       <Videos />
+      <Equipment />
     </div>
   );
 }
