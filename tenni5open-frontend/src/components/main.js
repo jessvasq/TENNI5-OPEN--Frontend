@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import Home from './home';
 import CreateMatch from './createForm';
 import MatchIndex from './matchIndex';
@@ -11,6 +11,7 @@ import Logout from './user/Logout';
 //MY MATCHES//
 import MyMatchesIndex from './myMatches/MyMatches';
 import ShowMyMatch from './myMatches/showMyMatch';
+
 
 function Main (props) {
 
@@ -210,6 +211,8 @@ function Main (props) {
            {/* MY MATCHES */}
            <Route path='/tenni5open/mymatches' element={<MyMatchesIndex matches={myMatch} />}/>
            <Route path='/tenni5open/mymatches/:id' element={<ShowMyMatch matches={myMatch} updateMatch={updateMatch} deleteMatch={deleteMatch} />}/>
+
+
           </Routes>
         </div>
       )

@@ -24,6 +24,10 @@ function Header() {
         <Link to='/tenni5open/mymatches'>
             <h1>My Matches</h1>
         </Link>
+        {/* /////CHAT// */}
+        <Link to='/chat/newmessage'>
+            <h1>New Chat</h1>
+        </Link>
     </nav>
   )
 }
