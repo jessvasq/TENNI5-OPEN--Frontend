@@ -32,7 +32,7 @@ function VideosIndex(props) {
  return (
   <>
     <div>
-      <h2>TUTORIALSSS</h2>
+      <h2>GRAND SLAMS HIGHLIGHTS</h2>
        {props.videos ? loaded() : loading()}
     </div>
     </>

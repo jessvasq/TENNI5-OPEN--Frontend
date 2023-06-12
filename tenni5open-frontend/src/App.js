@@ -5,6 +5,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Videos from './components/videoPage/videos';
 import Equipment from './components/equipment/equipment';
+import Lesson from './components/lessonPage/lesson';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Footer /> 
       <Videos />
       <Equipment />
+      <Lesson />
     </div>
   );
 }

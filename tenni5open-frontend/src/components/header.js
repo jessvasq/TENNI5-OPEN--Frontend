@@ -30,6 +30,9 @@ function Header() {
         <Link to='/equipment'>
             <h1>Equipment</h1>
         </Link>
+        <Link to='/lessons'>
+            <h1>How to Tennis</h1>
+        </Link>
     </nav>
   )
 }
