@@ -9,7 +9,7 @@ import ShowVideos from './showVideos';
 
 function Videos (props) {
 
-    const URL = 'http://localhost:8000/tutorials/'
+    const URL = 'http://localhost:8000/highlights/'
 
     const [ video, setVideo ] = useState([]);
 
@@ -61,8 +61,8 @@ function Videos (props) {
     return (
         <div>
           <Routes>
-           <Route path='/tutorials' element={<VideosIndex videos={video} />}/>
-           <Route path='/tutorials/:id' element={<ShowVideos videos={video} />}/>
+           <Route path='/highlights' element={<VideosIndex videos={video} />}/>
+           <Route path='/highlights/:id' element={<ShowVideos videos={video} />}/>
           </Routes>
         </div>
       )

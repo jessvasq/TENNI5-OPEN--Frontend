@@ -24,8 +24,8 @@ function Header() {
         <Link to='/tenni5open/mymatches'>
             <h1>My Matches</h1>
         </Link>
-        <Link to='/tutorials'>
-            <h1>Tutorials</h1>
+        <Link to='/highlights'>
+            <h1>Grand Slams Highlights</h1>
         </Link>
         <Link to='/equipment'>
             <h1>Equipment</h1>
