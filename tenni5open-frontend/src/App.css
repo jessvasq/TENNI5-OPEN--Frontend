@@ -1,8 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Telugu&display=swap');
+
 .App {
   text-align: center;
 }
 
-.App-logo {
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Tiro Telugu', serif;
+}
+
+
+/* HOME PAGE */
+h1.title {
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Righteous', cursive;
+  font-size: 200px;
+  /* animation: App-logo-spin infinite 20s linear; */
+}
+
+.ball-img {
+ /* animation: App-logo-spin infinite 30s linear; */
+ background-blend-mode: normal;
+ background-size: cover;
+ z-index: 3;
+
+}
+.backg {
+  height: 300px;
+  width: 900px;
+  z-index: auto;
+  margin-left: -5px;
+}
+
+a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+nav {
+  position: relative;
+  align-items: left; 
+}
+
+
+.menu {
+  flex-direction: column;
+  text-align: left;
+  width: 330px;
+  border-radius: 10px;
+}
+
+
+.nav-title {
+  font-size: 20px;
+  color: black;
+}
+
+.option {
+  transition: background-color 0.5s ease;
+}
+
+.option:hover {
+  opacity: 0.6;
+}
+
+.menu:hover{
+  background-color: whitesmoke;
+}
+
+
+
+/* MAIN HEADER */
+nav.header {
+  display: flex; 
+  justify-content: flex-end;
+  align-items:center;
+  margin: 10px;
+}
+
+.home-title {
+  font-family: 'Dongle', sans-serif;
+  font-family: 'Righteous', cursive;
+  margin-right: 550px;
+  font-size: 80px;
+}
+
+.box-header{
+  position: relative;
+  width: 500px;
+  height: 500px;
+}
+
+.ball-img1 {
+  height: 50px;
+  position: absolute;
+  animation: slide-animation 50s infinite;
+}
+
+/* @keyframes slide-animation {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-3000%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+.user-reg {
+  position: relative;
+  align-items: right; 
+}
+
+
+
+
+
+
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,7 +131,7 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;

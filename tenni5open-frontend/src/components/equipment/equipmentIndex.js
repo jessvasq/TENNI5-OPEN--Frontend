@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react'; 
+import { Link } from 'react-router-dom';
 
 function EquipmentIndex(props) {
  
   const loaded = () => {
       
     return props.equipments.map((equipment) => (
+
       <>
-      <div>
       
+      <div>
       </div>
      <div key={equipment.id} >
-     <h1>{equipment.image}</h1>
+     <a href={equipment.store} target="blank">
+     <img src={equipment.image}/></a> 
      <h1>{equipment.category}</h1>
-     <h1>{equipment.store}</h1>
      <h1>{equipment.description}</h1>
      </div>
      </>
