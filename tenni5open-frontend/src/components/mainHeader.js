@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Header from './header';
 
 
 function MainHeader() {
   return (
     
     <nav class='header'>
-      
+        <Header />
         <img src= 'https://teamwitsken.com/wp-content/uploads/Tennis-Ball-Free-Download-PNG.png' className='ball-img1'></img>
        
           
@@ -16,11 +17,16 @@ function MainHeader() {
         </Link>
         </div>
         <div className='user-container'>
+          <div className='user-login'>
         <Link to='/user/login'>
-            <h1 className='user-reg'>Login</h1>
+          {/* <img src='https://static.thenounproject.com/png/2035169-200.png'className='user-icon'/> */}
+            <h1 className='user-reg'>LOGIN</h1>
         </Link>
+        </div>
+
         <Link to='/user/logout'>
-            <h1 className='user-reg'>Logout</h1>
+          {/* <img src='https://static.thenounproject.com/png/205237-200.png' className='user-icon'/> */}
+            <h1 className='user-reg'>LOGOUT</h1>
         </Link>
         </div>
     

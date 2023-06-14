@@ -21,13 +21,33 @@ const handleClose = (event) => {
 
   return (
    
-    <div class='menu'>
-        <button id="show-nav" onClick={showNav}>MENU</button>
+    <div className='menu'>
+        <button id="show-nav" onClick={showNav}>
+        <img src='https://static.thenounproject.com/png/1166836-200.png' className='hamburger-menu'/>
+        </button>
+            <div className='menu-links'>
             {showNavBar &&
                 <>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+
             <div className='option'>
             <Link to='/tenni5open/home'>
                 <h2 className='nav-title'>HOME</h2>
+            </Link>
+            </div>
+
+            <div className='option'>
+            <Link to='/user/register'>
+                <h2 className='nav-title'>REGISTER</h2>
             </Link>
             </div>
 
@@ -38,8 +58,8 @@ const handleClose = (event) => {
             </div>
 
             <div className='option'>
-            <Link to='/user/register'>
-                <h2 className='nav-title'>REGISTER</h2>
+            <Link to='/tenni5open/create'>
+                <h2 className='nav-title'>HOST A MATCH</h2>
             </Link>
             </div>
 
@@ -67,9 +87,10 @@ const handleClose = (event) => {
                 <h2 className='nav-title'>HOW TO TENNIS</h2>
             </Link>
             </div>
-            <button onClick={handleClose}> Close X</button>
+            <button id="close-menu" onClick={handleClose}>X</button>
             </>
        }
+        </div>
     </div>
   );
 }
