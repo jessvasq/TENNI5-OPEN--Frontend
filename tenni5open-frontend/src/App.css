@@ -6,34 +6,62 @@
 }
 
 
-body {
+/* body {
   background-color: black;
   color: white;
   font-family: 'Tiro Telugu', serif;
+} */
+
+body {
+  background-color: white;
+  color: black;
+  font-family: 'Tiro Telugu', serif;
+}
+
+/* HOME PAGE */
+.home-page {
+  position: relative;
+  display: inline-block;
 }
 
 
-/* HOME PAGE */
+.h-title {
+  position:absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 h1.title {
   font-family: 'Dongle', sans-serif;
   font-family: 'Righteous', cursive;
   font-size: 200px;
+  text-align: center;
+  margin: 5;
+  color: whitesmoke;
   /* animation: App-logo-spin infinite 20s linear; */
 }
 
 .ball-img {
  /* animation: App-logo-spin infinite 30s linear; */
- background-blend-mode: normal;
- background-size: cover;
+ height: 175px;
+ width: 170px;
  z-index: 3;
 
 }
-.backg {
-  height: 300px;
-  width: 900px;
+.backg-img {
+  height: 100%;
+  width: 1900px;
   z-index: auto;
   margin-left: -5px;
+  margin-top: -28px;
 }
+
+
+/* MENU */
 
 a {
   color: whitesmoke;
@@ -76,16 +104,26 @@ nav {
 /* MAIN HEADER */
 nav.header {
   display: flex; 
-  justify-content: flex-end;
+  position: fixed;
+  justify-content: center; 
+  z-index: 1000;
   align-items:center;
-  margin: 10px;
+  width: 100%;
+  margin-top: -10px;
+  height: 80px;
 }
 
 .home-title {
   font-family: 'Dongle', sans-serif;
   font-family: 'Righteous', cursive;
-  margin-right: 550px;
-  font-size: 80px;
+  font-size: 35px;
+  width: 100%;
+  margin-left: -400px;
+  /* position: absolute; */
+}
+
+.main-header-title {
+  color: black;
 }
 
 .box-header{
@@ -97,7 +135,7 @@ nav.header {
 .ball-img1 {
   height: 50px;
   position: absolute;
-  animation: slide-animation 50s infinite;
+  animation: slide-animation 30s infinite;
 }
 
 /* @keyframes slide-animation {
@@ -105,19 +143,30 @@ nav.header {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(-3000%);
+    transform: translateX(-2000%);
   }
   100% {
     transform: translateX(0);
   }
 } */
 
+.user-container{
+  width: 100%;
+  justify-content:flex-end;
+  display: flex; 
+}
+
 .user-reg {
-  position: relative;
-  align-items: right; 
+  /* align-items: right;  */
+  justify-content: center; 
+  color: black;
 }
 
 
+nav.header:hover, .user-container:hover, .main-header-title:hover {
+  background-color: whitesmoke;
+  opacity: 0.8;
+}
 
 
 

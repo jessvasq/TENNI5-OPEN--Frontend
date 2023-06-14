@@ -6,11 +6,11 @@ function Home() {
 
   return (
     <>
-  
-    <h1 className='title'>TENNI5 OPEN</h1>
-    <div>
-      <img src= 'https://teamwitsken.com/wp-content/uploads/Tennis-Ball-Free-Download-PNG.png' className='ball-img'></img>
-      <img src="https://media1.giphy.com/media/ftfVpeWsm95QgGfOZ8/200w.webp?cid=ecf05e4797yes3m30ykburjd35k7dxogd0a8fqr3xh7mq0e2&ep=v1_gifs_search&rid=200w.webp&ct=g" className='backg'/>
+    <div className='home-page'>
+    <div className='h-title'> 
+    <h1 className='title'>TENNI5 <img src= 'https://teamwitsken.com/wp-content/uploads/Tennis-Ball-Free-Download-PNG.png' className='ball-img'></img>PEN</h1>
+    </div>
+      <img src="https://photo-assets.usopen.org/images/pics/large/c_USTA1035787_20180901_Ashe_2048x1152.jpg" className='backg-img'/>
     </div>
     </>
   )
