@@ -53,14 +53,25 @@ function Register() {
     
     
     return (
-    <section>
-    <h1>REGISTER</h1>
+    <section className='grid-register'>
+    <div className='grid-welcome'>
+      <h1 className="welcome-mssg">WELCOME TO  TENNI5 OPEN</h1>
+    </div>
+
+    <div className='grid-user'>
+    <h1 className="login-title">REGISTER</h1>
     <form onSubmit={handleSubmit}>
-      <input type="text" value={registerForm.username} name="username" placeholder="username" onChange={handleChange}/>
-      <input type="text" value={registerForm.email} name="email" placeholder="email" onChange={handleChange} />
-      <input type="password" value={registerForm.password} name="password" placeholder="password" onChange={handleChange}/>
-      <input type="submit" value="REGISTER" />
+      <div className='username-input'>
+      <input className='user-input' type="text" value={registerForm.username} name="username" placeholder="USERNAME" onChange={handleChange}/></div>
+      <div className='email-input'>
+      <input className='user-input' type="text" value={registerForm.email} name="email" placeholder="EMAIL" onChange={handleChange}/> </div>
+      <div className='password-input'>
+      <input className='user-input' type="password" value={registerForm.password} name="password" placeholder="PASSWORD" onChange={handleChange}/>
+      </div>
+      <input className="user-pw-bttn" type="submit" value="REGISTER" />
     </form>
+    </div>
+
     </section>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Header from './header';
+import Logout from './user/Logout';
 
 
 function MainHeader() {
   return (
-    
     <nav class='header'>
         <Header />
         <img src= 'https://teamwitsken.com/wp-content/uploads/Tennis-Ball-Free-Download-PNG.png' className='ball-img1'></img>
@@ -20,7 +20,7 @@ function MainHeader() {
           <div className='user-login'>
         <Link to='/user/login'>
           {/* <img src='https://static.thenounproject.com/png/2035169-200.png'className='user-icon'/> */}
-            <h1 className='user-reg'>LOGIN</h1>
+            <h1 className='user-reg'>SIGN IN</h1>
         </Link>
         </div>
 

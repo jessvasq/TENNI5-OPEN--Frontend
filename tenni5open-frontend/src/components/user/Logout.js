@@ -28,7 +28,6 @@ const Logout = (props) => {
 
 return (
   <section>
-  <h1>Logout</h1>
   <form onSubmit={handleSubmit}>
     <input type="submit" value="LOG OUT" />
    </form>

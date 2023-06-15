@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-
+import Register from "./register";
+import { Link } from "react-router-dom";
 
 const Login = (props) => {
 
@@ -54,33 +55,52 @@ const Login = (props) => {
 
 
 return (
-  <section>
-  <h1>LOGIN</h1>
+  <section className='grid-register'>
+    <div className='grid-welcome'>
+      <h1 className="welcome-mssg">WELCOME BACK !</h1>
+    </div>
+  <div className='grid-user'>
+  <h1 className="login-title">SIGN IN</h1>
   <form onSubmit={handleSubmit}>
-  <input
+    <div className='username-input'>
+    <input className='user-input'
       type="text"
       value={loginForm.username}
       name="username"
-      placeholder="username"
+      placeholder="USERNAME"
       onChange={handleChange}
     />
-    <input
+    </div>
+
+    <div className='email-input'>
+    <input  className='user-input'
       type="text"
       value={loginForm.email}
       name="email"
-      placeholder="email"
+      placeholder="EMAIL"
       onChange={handleChange}
     />
-    <input
+    </div>
+
+    <div className='password-input'>
+    <input className='user-input'
       type="password"
       value={loginForm.password}
       name="password"
-      placeholder="password"
+      placeholder="PASSWORD"
       onChange={handleChange}
     />
-    
-    <input type="submit" value="LOG IN" />
+    </div>
+
+    <input className="user-pw-bttn" type="submit" value="LOG IN" />
    </form>
+   <div>
+   {/* <input className="new-user" type="submit" value="NEW USER" /> */}
+   <Link to='/user/register'>
+      <h2 className='new-user'>NEW USER</h2>
+   </Link>
+   </div>
+   </div>
 </section>
 
   );
