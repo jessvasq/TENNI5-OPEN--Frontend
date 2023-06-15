@@ -31,9 +31,25 @@ function VideosIndex(props) {
 
  return (
   <>
-    <div>
+   <div className='grid-videos1'>
+    <div className='grid-videos-text1'> 
+    HELLO
+    </div>
+    <div className='grid-videos-text'> 
       <h2>GRAND SLAMS HIGHLIGHTS</h2>
        {props.videos ? loaded() : loading()}
+    </div>
+    </div>
+
+
+    <div className='grid-videos'>
+    <div className='grid-videos-text'> 
+    HELLO
+    </div>
+    <div className='grid-videos-text'> 
+      <h2>GRAND SLAMS HIGHLIGHTS</h2>
+       {props.videos ? loaded() : loading()}
+    </div>
     </div>
     </>
  )}

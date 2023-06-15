@@ -143,6 +143,8 @@ nav.header {
   align-items:center;
   width: 100%;
   height: 80px;
+  background-color: whitesmoke;
+  opacity: 0.5;
 }
 
 .home-title {
@@ -248,7 +250,7 @@ nav.header:hover, .user-container:hover, .main-header-title:hover {
 
 
 
-/* LOGIN PAGE */
+/* REGISTER/LOGIN PAGE */
 .grid-register {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -337,4 +339,79 @@ form {
 .welcome-mssg {
   color: whitesmoke;
   margin: 25px 380px 0 0px;
+}
+
+
+
+/* LESSON PAGE */
+
+.grid-lesson {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin: 20px;
+  margin-top: 100px;
+}
+
+.lesson-p {
+ text-align: justify;
+}
+
+.subtitle {
+  text-align: left;
+}
+
+
+#how-to-header {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin-top: -15px;
+}
+
+.grid-lesson-videos {
+ background-color: #282c34;
+ position: static;
+ margin-left: 20px;
+ margin-right: -10px;
+}
+
+
+.img-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+/* VIDEO PAGE */
+
+
+.grid-videos {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+  margin: 20px;
+  margin-top: 100px;
+}
+
+.grid-videos-text {
+  background-color: #282c34;
+  position: static;
+  margin-left: 20px;
+  margin-right: -10px;
+}
+
+
+.grid-videos1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  margin: 20px;
+  margin-top: 100px;
+}
+
+.grid-videos-text1 {
+  background-color: #282c34;
+  position: static;
+  margin-left: 20px;
+  margin-right: -10px;
 }
