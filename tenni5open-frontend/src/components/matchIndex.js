@@ -25,12 +25,23 @@ const filteredMatch = props.matches.filter((match) => { //filter() iterates over
     }
 
     return filteredMatch.map((match) => (
-      <div key={match.id} >
-        <Link to={`/tenni5open/matches/${match.id}`}> 
-          <img src={match.image}/>
-          <h1>{match.description} , {match.location}</h1> 
-        </Link>
-      </div>
+      <div className='grid-matches'>
+
+          <div className='grid-matches-descrip'>
+          <h1 className='match-location'>{match.location} </h1> 
+          <h1 className='match-details'> {match.description} </h1>
+          </div>
+
+          <div className='grid-matches-img'>
+            <div key={match.id} >
+              <Link to={`/tenni5open/matches/${match.id}`}> 
+              <img src={match.image} className= "img-matches"/>
+              </Link>
+          </div>
+          </div>
+
+         </div>
+       
     ));
   };
   
@@ -42,9 +53,9 @@ const filteredMatch = props.matches.filter((match) => { //filter() iterates over
 
   return (
     <div>
-    <h1>UPCOMING MATCHES</h1>
+    <h1 className='matches-title'>UPCOMING MATCHES</h1>
 
-    Search: <input type="text" placeholder='Search by location' value={searchQuery} onChange={handleChange} />
+   <input className='search-bar' type="text" placeholder='SEARCH' value={searchQuery} onChange={handleChange} />
     {props.matches ? loaded() : loading()}
 
   </div>

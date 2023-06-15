@@ -42,9 +42,9 @@ const filteredMatch = props.matches.filter((myMatch) => { //filter() iterates ov
 
   return (
     <div>
-    <h1>MY MATCHES</h1>
+    <h1 className='matches-title'>MY MATCHES</h1>
 
-    Search: <input type="text" placeholder='Search by location' value={searchQuery} onChange={handleChange} />
+    <input className='search-bar' type="text" placeholder='ENTER YOUR LOCATION...' value={searchQuery} onChange={handleChange} />
     {props.matches ? loaded() : loading()}
 
   </div>

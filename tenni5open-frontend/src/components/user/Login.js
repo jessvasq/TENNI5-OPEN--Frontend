@@ -20,7 +20,7 @@ const Login = (props) => {
 //redirect to index once logged in 
 
   const redirectPage = () => {
-    window.location.href = '/tenni5open'
+    window.location.href = '/tenni5open/matches'
   }
 
   const handleSubmit = async(e) => {

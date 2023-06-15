@@ -8,17 +8,17 @@ function VideosIndex(props) {
       
         return props.videos.map((video) => (
           <>
-          <div>
+          <div className='slam-videos'>
             {/* iframe embeds the youtube video. Allow= enables permissions for the video player.AlloFullScreen allows the video to be displayed in full screen.  */}
-            <iframe
-            src={`https://www.youtube.com/embed/${video.video}`}
+            <iframe className= "yt-video-slams"
+            src={`https://www.youtube.com/embed/${video.video}` }
             allow= "accelerometer, autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
             ></iframe>
           </div>
          <div key={video.id} >
-         <h1>{video.title}</h1>
-         <h1>{video.description}</h1>
+         {/* <h1>{video.title}</h1>
+         <h1>{video.description}</h1> */}
          </div>
          </>
         ));
@@ -31,26 +31,8 @@ function VideosIndex(props) {
 
  return (
   <>
-   <div className='grid-videos1'>
-    <div className='grid-videos-text1'> 
-    HELLO
-    </div>
-    <div className='grid-videos-text'> 
-      <h2>GRAND SLAMS HIGHLIGHTS</h2>
+      <h1 className='grand-slam-title'>GRAND SLAMS HIGHLIGHTS</h1>
        {props.videos ? loaded() : loading()}
-    </div>
-    </div>
-
-
-    <div className='grid-videos'>
-    <div className='grid-videos-text'> 
-    HELLO
-    </div>
-    <div className='grid-videos-text'> 
-      <h2>GRAND SLAMS HIGHLIGHTS</h2>
-       {props.videos ? loaded() : loading()}
-    </div>
-    </div>
     </>
  )}
 

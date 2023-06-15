@@ -11,14 +11,14 @@ function LessonIndex(props) {
           <>
           <div>
             {/* iframe embeds the youtube lesson. Allow= enables permissions for the lesson player.AlloFullScreen allows the lesson to be displayed in full screen.  */}
-            <iframe
+            <iframe className= "yt-video"
             src={`https://www.youtube.com/embed/${lesson.video}`}
             allow= "accelerometer, autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
             ></iframe>
           </div>
          <div key={lesson.id} >
-         <h1>{lesson.title}</h1>
+         <h1 className= "video-description">{lesson.title}</h1>
          </div>
          </>
         ));

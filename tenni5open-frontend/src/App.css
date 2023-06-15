@@ -24,7 +24,6 @@ body {
   display: inline-block;
 }
 
-
 .h-title {
   position:absolute;
   width: 100%;
@@ -354,6 +353,7 @@ form {
 
 .lesson-p {
  text-align: justify;
+ margin: 0px 60px 0px 60px;
 }
 
 .subtitle {
@@ -371,10 +371,9 @@ p {
 }
 
 .grid-lesson-videos {
- background-color: #282c34;
+ background-color: #7d7d7d;
  position: static;
- margin-left: 20px;
- margin-right: -10px;
+ margin: -20px -10px 0px 20px;
 }
 
 
@@ -383,35 +382,123 @@ p {
   grid-template-columns: 1fr 1fr;
 }
 
+.video-description { 
+  font-size: 15px;
+  width: 50%;
+  margin-left: 150px;
+  margin-top: -3px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+}
+
+.yt-video {
+  border: none;
+  border-radius: 10px;
+  height: 170px;
+}
+
+.yt-video:hover {
+  opacity: 0.8;
+  border-radius: 0px;
+}
+
+
 
 /* VIDEO PAGE */
 
 
-.grid-videos {
-  display: grid;
-  grid-template-columns: 1fr 2fr; 
+.yt-video-slams {
+  border: none;
+  border-radius: 12px;
+  height: 700px;
+  width: 400px;
+  float: left;
   margin: 20px;
+}
+
+.yt-video-slams:hover {
+  opacity: 0.6;
+  border-radius: 0px;
+}
+
+.slam-videos {
+  margin: 70px;
+}
+
+.grand-slam-title {
+  margin-top: 120px;
+  margin-bottom: -50px;
+}
+
+
+
+/* INDEX PAGE */
+/* SEARCH BAR */
+
+.search-bar {
+  border: none;
+  border-bottom: 2px solid #282c34;
+  font-size: 18px;
+  margin: 0px;
+  margin-bottom: -5px;
+  height: 20px;
+  padding: 4px;
+  text-align: right;
+}
+
+.matches-title {
   margin-top: 100px;
 }
 
-.grid-videos-text {
-  background-color: #282c34;
-  position: static;
-  margin-left: 20px;
-  margin-right: -10px;
+h1 {
+  letter-spacing: 2px;
 }
 
+.img-matches {
+  height: 100%;
+  width: 100%;
+}
 
-.grid-videos1 {
+.img-matches:hover {
+  opacity: 0.6;
+}
+
+.grid-matches {
   display: grid;
-  grid-template-columns: 2fr 1fr; 
-  margin: 20px;
-  margin-top: 100px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-top: 15px;
+  grid-template-columns: 1fr 2fr;
 }
 
-.grid-videos-text1 {
-  background-color: #282c34;
+
+.grid-matches-img {
+   margin: 15px;
+   margin-bottom: 0px;
+}
+
+.grid-matches-descrip {
+  background-color:#39649d;
   position: static;
+  margin-top: 15px;
+  margin-bottom: 10px;
   margin-left: 20px;
   margin-right: -10px;
+  color: white;
+}
+
+.match-location {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+
+.match-details {
+  font-size: 20px;
+  margin-top: 50%;
+  margin-left: 25%;
+  width: 100%;
+  width: 50%;
 }
