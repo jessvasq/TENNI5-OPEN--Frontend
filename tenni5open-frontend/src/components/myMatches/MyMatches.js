@@ -25,12 +25,22 @@ const filteredMatch = props.matches.filter((myMatch) => { //filter() iterates ov
     }
 
     return filteredMatch.map((myMatch) => (
+    <div className='grid-matches'>
+
+    <div className='grid-matches-img'>
+      <h1  className='match-location'>{myMatch.location}</h1>
+      <h1 className='match-details'>HOST: {myMatch.username}</h1>
+    </div>
+
+    <div className='grid-matches-img'>
       <div key={myMatch.id} >
         <Link to={`/tenni5open/mymatches/${myMatch.id}`}> 
-          <img src={myMatch.image}/>
-          <h1>{myMatch.description} , {myMatch.location}, {myMatch.username}</h1> 
+          <img src={myMatch.image} className= "img-matches"/> 
         </Link>
-      </div>
+    </div>
+    
+    </div>
+    </div> 
     ));
   };
   

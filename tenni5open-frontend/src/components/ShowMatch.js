@@ -90,34 +90,50 @@ const match = matches.find((p) => p.id === Number(id));
  
 return ( 
 
-<div className="match"> 
-  <h1>Location: {match.location}</h1> 
-  <img src={match.image} /> 
-  <h2>Description: {match.description}</h2> 
-  <h2>Host: {match.host_name.username}</h2> 
-  {/* <h2>Username: {match.username}</h2>  */}
-  <h2>Date: {match.date}</h2> 
-  <h2>Players:{match.players}</h2> 
-  <h2>Skill level:{match.skill_level}</h2> 
-  <h2>Price: {match.price}</h2> 
-  <button id="delete" onClick={removeMatch}>Delete</button>
+<div className="matches-grid"> 
+  <div className='match-host'> 
+     <h2 className='host-name'> Hosted BY <br/> 
+     {match.host_name.username}</h2> 
+  </div>
 
 
-  <button id="update" onClick={editMatch}>UPDATE</button>
+  <div className='match-description'>
+    <img className='matches-img'  src={match.image} /> 
+
+    <div className='descrip-container'>
+        <h2 className='descrip-title'>LOCATION:</h2> 
+        <h2 className='description'>{match.location}</h2> 
+        <h2 className='descrip-title'>DESCRIPTION:</h2> 
+        <h2 className='description'>{match.description}</h2> 
+        {/* <h2>Username: {match.username}</h2>  */}
+        <h2 className='descrip-title'>DATE: </h2> 
+        <h2 className='description'>{match.date}</h2> 
+        <h2 className='descrip-title'>PLAYERS: </h2> 
+          <h2 className='description'>{match.players}</h2> 
+        <h2 className='descrip-title'>LEVEL: </h2> 
+        <h2 className='description'>{match.skill_level}</h2> 
+        <h2 className='descrip-title'>PRICE: </h2> 
+        <h2 className='description'> ${match.price}</h2> 
+    </div>
+
+  {/* <button id="delete" onClick={removeMatch}>Delete</button>
+
+
+  <button id="update" onClick={editMatch}>UPDATE</button> */}
     {/* {showupdateForm && <UpdateForm matches={match} updateMatch={props.updateMatch} />} */}
-    {showupdateForm && 
+    {/* {showupdateForm && 
         <form onSubmit={handleSubmit}>
-          Location: <input type="text" value={updateForm.location} name="location" placeholder="location" onChange={handleChange} />
-          Description: <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
-          Date & Time: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
-          Players: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
-          Price: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
+          LOCATION: <input type="text" value={updateForm.location} name="location" placeholder="location" onChange={handleChange} />
+          <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
+          DATE: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
+          PLAYERS: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
+          PRICE: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
           <input type="submit" value="Update Match"/>
           <button onClick={handleClose}>X</button>
         </form> 
-    }
+    } */}
 
-  <button id="add" onClick={showAdd}>Add</button>
+  <button className="join-bttn" onClick={showAdd}>JOIN MATCH</button>
     {showAddForm && 
       <form onSubmit={handleAdd}>
           {/* <input type="text" value={match.image} name="image" placeholder="image" onChange={handleChange} />
@@ -132,7 +148,7 @@ return (
       <input type="submit" value="Confirm" />
     </form>
   }
-
+  </div>
 </div>
 ); 
 } 

@@ -61,39 +61,45 @@ const myMatch = matches.find((p) => p.id === Number(id));
   }
 
 return ( 
+  <>
 
-<div className="match"> 
-  <h1>Location: {myMatch.location}</h1> 
-  <img src={myMatch.image} /> 
-  <h2>Description: {myMatch.description}</h2> 
-  <h2>Host: {myMatch.username}</h2> 
-  {/* <h2>Host: {myMatch.host_name.username}</h2>  */}
-  <h2>Date: {myMatch.date}</h2> 
-  <h2>Players:{myMatch.players}</h2> 
-  <h2>Skill level:{myMatch.skill_level}</h2> 
-  <h2>Price: {myMatch.price}</h2> 
-   No longer interested: <button id="delete" onClick={removeMatch}>Remove</button>
+  <div className='matches-grid'>
+
+    <div className='match-host'>
+      <h2 className='host-name'> HOSTED BY <br/>
+      {myMatch.username}
+      </h2>
+    </div>
 
 
-  <button id="update" onClick={editMatch}>UPDATE</button>
-    {/* {showupdateForm && <UpdateForm matches={match} updateMatch={props.updateMatch} />} */}
-    { showupdateForm &&
-        <form onSubmit={handleSubmit}>
-          Description: <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
-          Date & Time: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
-          Players: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
-          Price: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
-          <input type="submit" value="Update Match"/>
-          <button onClick={handleClose}>X</button>
-        </form> 
-    }
+  <div className='match-description'>
+    <img className='matches-img' src={myMatch.image} /> 
+  
+
+<div className='descrip-container'> 
+  <h2 className='descrip-title'>LOCATION:</h2> 
+  <h1 className='description'>{myMatch.location}</h1> 
+
+  <h2 className='descrip-title'>DESCRIPTION:</h2> 
+  <h2 className='description'>{myMatch.description}</h2> 
+  <h2 className='descrip-title'>DATE: </h2> 
+  <h2 className='description'>{myMatch.date}</h2> 
+  <h2 className='descrip-title'>PLAYERS: </h2> 
+  <h2 className='description'>{myMatch.players}</h2> 
+  <h2 className='descrip-title'>LEVEL: </h2> 
+  <h2 className='description'>{myMatch.skill_level}</h2> 
+  <h2 className='descrip-title'>PRICE: </h2> 
+  <h2 className='description'>{myMatch.price}</h2> 
+
+  </div>
+  
 
 
-<button id="chat" onClick={openChat}>Contact Host</button>
+<button className="buttons" onClick={openChat}>Contact Host</button>
    {showContactForm && 
     <Chat /> 
    }
-  <button onClick={closeChat}>X</button>
+  <button id="close-chat" onClick={closeChat}>X</button>
 {/* 
 //   <button id="add" onClick={showAdd}>Add</button>
 //     {showAddForm && 
@@ -110,7 +116,26 @@ return (
 //     </form> */}
 
 
+<button className="bttn-update" onClick={editMatch}>UPDATE</button>
+    {/* {showupdateForm && <UpdateForm matches={match} updateMatch={props.updateMatch} />} */}
+    { showupdateForm &&
+        <form onSubmit={handleSubmit}>
+          Description: <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
+          Date & Time: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
+          Players: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
+          Price: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
+          <input type="submit" value="Update Match"/>
+          <button onClick={handleClose}>X</button>
+        </form> 
+    }
+
+
+  <br/>
+  <h3 className='remove-text'>No longer interested:</h3> <br/>
+  <button className="bttn-remove" onClick={removeMatch}>REMOVE</button>
+  </div>
 </div>
+</>
 ); 
 } 
 

@@ -38,6 +38,10 @@ const handleClose = (event) => {
                 <br/>
                 <br/>
                 <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
 
             <div className='option'>
             <Link to='/tenni5open/home'>
@@ -53,7 +57,7 @@ const handleClose = (event) => {
 
             <div className='option'>
             <Link to='/tenni5open/matches'>
-                <h2 className='nav-title'>MATCHES</h2>
+                <h2 className='nav-title'>UPCOMING MATCHES</h2>
             </Link>
             </div>
 
