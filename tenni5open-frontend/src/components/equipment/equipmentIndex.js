@@ -6,18 +6,25 @@ function EquipmentIndex(props) {
   const loaded = () => {
       
     return props.equipments.map((equipment) => (
-
+      <div className='equipment-container'>
       <>
-      
-      <div>
-      </div>
-     <div key={equipment.id} >
-     <a href={equipment.store} target="blank">
-     <img src={equipment.image}/></a> 
-     <h1>{equipment.category}</h1>
-     <h1>{equipment.description}</h1>
-     </div>
+     
+        <div className='grid-equip-img'>
+          <div key={equipment.id} >
+          </div>
+          <a href={equipment.store} target="blank">
+          <img src={equipment.image} className='img-equipment'/></a> 
+        </div>
+
+         {/* <div className='grid-equip-descrip'> */}
+         {/* <h1 className='grid-equip-descrip'>{equipment.category}</h1>  */}
+         <div>
+         <a href={equipment.store} target="blank">
+          <h1 className='grid-equip-descrip'> VISIT THE STORE <br/> {equipment.description}</h1></a> 
+        </div>
+        {/* </div>   */}
      </>
+     </div>
     ));
 };
 
@@ -29,7 +36,7 @@ const loading = () => {
 return (
 <>
 <div>
-  <h2>EQUIPMENT</h2>
+  <h1 className='equip-title'>EQUIPMENT</h1>
    {props.equipments ? loaded() : loading()}
 </div>
 </>

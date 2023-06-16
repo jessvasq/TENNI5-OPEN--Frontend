@@ -52,11 +52,11 @@ h1.title {
 
 }
 .backg-img {
-  height: 100%;
+  height: 100vh;
   width: 1900px;
   z-index: auto;
   margin-left: -5px;
-  margin-top: -28px;
+  /* margin-top: -2px; */
   opacity: 0.95;
 }
 
@@ -141,7 +141,7 @@ nav.header {
   z-index: 1000;
   align-items:center;
   width: 100%;
-  height: 80px;
+  height: 85px;
   background-color: #fff;
   opacity: 0.7;
 }
@@ -151,7 +151,7 @@ nav.header {
   font-family: 'Righteous', cursive;
   font-size: 35px;
   width: 100%;
-  margin-left: -530px;
+  margin-left: -500px;
   /* position: absolute; */
 }
 
@@ -254,10 +254,10 @@ nav.header:hover, .user-container:hover, .main-header-title:hover {
 .grid-register {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 350px;
-  margin-right: 350px;
-  margin-top: 150px;
-  height: 700px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 190px;
+  height: 800px;
   box-shadow:  6px 6px 12px #c7c7c7,
   -6px -6px 12px #ffffff;
 }
@@ -415,7 +415,7 @@ p {
   height: 700px;
   width: 400px;
   float: left;
-  margin: 20px;
+  margin: 10px;
 }
 
 .yt-video-slams:hover {
@@ -520,12 +520,12 @@ SHOW BY ID */
 .match-host {
   background-color: #282c34;
   border-radius: 50%;
-  height: 320px;
-  width: 320px;
+  height: 250px;
+  width: 250px;
   align-items: center;
   justify-content: center;
   z-index: 3;
-  margin-top: 33%;
+  margin-top: 30%;
   transform: translate(-50%, -50%);
   z-index: 1;
   margin-left: 50%;
@@ -535,7 +535,7 @@ SHOW BY ID */
 }
 
 .match-description{
-  margin-top: -35%;
+  margin-top: -30%;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 4px;
 }
@@ -566,7 +566,7 @@ SHOW BY ID */
 
 .host-name{
   text-transform: uppercase;
- transform: translate(1%, 140%);
+ transform: translate(1%, 80%);
  text-align: center;
 }
 
@@ -580,6 +580,8 @@ SHOW BY ID */
   border: 1px solid #5a5958;
   margin-left: 310px;
   margin-bottom: 20px;
+  border-radius: 2px;
+  border: none;
 }
 
 
@@ -592,6 +594,8 @@ SHOW BY ID */
   border: 1px solid #5a5958;
   margin-left: 310px;
   margin-bottom: 20px;
+  border-radius: 2px;
+  border: none;
 }
 
 .bttn-update {
@@ -601,6 +605,8 @@ SHOW BY ID */
   width: 110px;
   font-size: 15px;
   border: 1px solid #5a5958;
+  border-radius: 2px;
+  border: none;
   margin-bottom: 30px; 
   margin-left: -420px;
   position: absolute;
@@ -630,10 +636,91 @@ SHOW BY ID */
   border: 1px solid #5a5958;
   margin-bottom: 30px; 
   margin-left: 600px;
+  border-radius: 2px;
+  border: none;
 }
 
 .remove-text { 
   margin-left: 550px;
   font-weight: lighter;
   margin-bottom: -30px;
+}
+
+
+/* CHAT */
+
+
+/* EQUIPMENT PAGE */
+
+.equipment-container {
+  grid-template-columns: 1fr 1fr 1fr;
+  float: left;
+  margin-bottom: 6px;
+}
+
+.img-equipment {
+  width: 400px;
+  height: 450px;
+ margin-left: 10px; 
+}
+
+.grid-equip-img {
+  margin-left: 28%;
+}
+
+.equip-title{
+  margin-top: 110px;
+ }
+
+ .grid-equip-descrip {
+  transform: translate(45%, -400%);
+  width: 80%;
+  font-size: 8px;
+  font-weight: lighter;
+  z-index: 1;
+  line-height: 2rem;
+  
+  color:rgba(0, 0, 0, 0.0);
+  /* background-color: rgba(0, 0, 0, 0.2); */
+ }
+
+ .grid-equip-descrip:hover {
+  background-color: white;
+  color: black;
+}  
+
+.grid-equip-img:hover {
+  opacity: 0.5;
+}
+
+
+
+/* HOST NEW PAGE  */
+
+.grid-host{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 90px;
+  height: 100vh;
+  box-shadow:  6px 6px 12px #c7c7c7,
+  -6px -6px 12px #ffffff;
+}
+
+.host-user-input {
+  border: none;
+  border-bottom: 1px solid #282c34;
+  font-size: 15px;
+  width: 35%;
+  margin-top: 25px;
+  margin-bottom: -5px;
+  height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.grid-host-img {
+  background-image: url("https://photo-assets.usopen.org/images/pics/large/f_bw_USTA1041310_20180903_Day8_DC101609.jpg");
+  background-size: cover;
 }
