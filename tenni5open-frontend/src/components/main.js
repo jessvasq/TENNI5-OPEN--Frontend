@@ -7,6 +7,7 @@ import ShowMatch from './ShowMatch';
 import Register from './user/register';
 import Login from './user/Login';
 import Logout from './user/Logout';
+import About from '../about';
 
 //MY MATCHES//
 import MyMatchesIndex from './myMatches/MyMatches';
@@ -207,6 +208,7 @@ function Main (props) {
            <Route path='/user/register' element={<Register/>}/>
            <Route path='/user/login' element={<Login />}/>
            <Route path='/user/logout' element={<Logout/>}/>
+           <Route path='/about' element={<About/>}/>
 
            {/* MY MATCHES */}
            <Route path='/tenni5open/mymatches' element={<MyMatchesIndex matches={myMatch} />}/>

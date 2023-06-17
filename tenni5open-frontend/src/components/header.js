@@ -44,8 +44,8 @@ const handleClose = (event) => {
                 <br/>
 
             <div className='option'>
-            <Link to='/tenni5open/home'>
-                <h2 className='nav-title'>HOME</h2>
+            <Link to='/about'>
+                <h2 className='nav-title'>ABOUT</h2>
             </Link>
             </div>
 

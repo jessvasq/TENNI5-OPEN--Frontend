@@ -5,6 +5,7 @@ import MainHeader from './components/mainHeader';
 import Videos from './components/videoPage/videos';
 import Equipment from './components/equipment/equipment';
 import Lesson from './components/lessonPage/lesson';
+import Footer from './components/footer';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Videos />
       <Equipment />
       <Lesson />
+      <Footer />
     </div>
   );
 }

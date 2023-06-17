@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom';
 function Footer () {
   return (
     <>
-    <Link to='/tenni5open/create'>
-      <h1>Create</h1>
-    </Link>
+   <div className='footer-menu'>
+            <Link to='/tenni5open/home'>
+                <h2 className='foot-title'>HOME</h2>
+            </Link>
+            <Link to='/about'>
+                <h2 className='foot-title'>ABOUT</h2>
+            </Link>
+   </div>
     </>
   )
 }
