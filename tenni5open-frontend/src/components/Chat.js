@@ -152,12 +152,14 @@ const handleSubmit = (event) => {
 
 return (
     <>
-<div>
-    <h1>New CHAT</h1>
+<div className='grid-mssg'>
+    
+    <h1 className="new-chat">New CHAT</h1>
+
             {!conversationId && (
             <div>
-           <input type="text" value={NewFormChat.name} name="name" placeholder="New Chat" onChange={handleChange} />
-           <button onClick={handleSubmit}> + New Chat </button>
+           <input className='mssg-new-input' type="text" value={NewFormChat.name} name="name" placeholder="Subject" onChange={handleChange} />
+           <button className="new-mssg-bttn" onClick={handleSubmit}> Create New Chat </button>
             </div>
            )}
 
@@ -168,10 +170,21 @@ return (
             </div>
            )} */}
 
-    <div>
-        View Message: <br/>
-        <input type="text" value={conversationId}  placeholder="Reference Number" onChange={handleChangeConvo}/>
-        <button onClick={handleOnClick}> Search </button>
+
+<div className='grid-newmssg'>
+        <h1 className="mssg-title">REPLY / Message</h1>
+        <input className='ref' type="text" value={newText.conversation} name="conversation" placeholder="Send to: Enter Reference Number" onChange={handleChangeText} />
+        <input className='mssg' type="text" value={newText.message} name="message" placeholder="type your message" onChange={handleChangeText} />
+        <button className="user-send-bttn" onClick={handleSubmitText}> 
+        <img src="https://static.thenounproject.com/png/1015120-200.png"  id="icon1"></img>
+        </button>
+                
+    </div>
+    
+<div className='grid-mssg-input'>
+        <h1 className="mssg-title1">View All Messages:</h1><br/>
+        <input className='host-user-input' type="text" value={conversationId}  placeholder="Reference Number" onChange={handleChangeConvo}/>
+        <button className="user-mssg-bttn" onClick={handleOnClick}> SEARCH</button>
     </div>
     
         {conversationId && ( 
@@ -179,19 +192,16 @@ return (
             {text.map((text) => (
              <div key={text.id}>
               {text.user.username} <br/>
+              {text.user.email} <br/>
               {text.message}
                 </div>
         ))}
             
             </>
          )}
-    <div>
-        <h1>New Message</h1>
-        <input type="text" value={newText.message} name="message" placeholder="type your message" onChange={handleChangeText} />
-        <input type="text" value={newText.conversation} name="conversation" placeholder="Enter Reference Number" onChange={handleChangeText} />
-        <button onClick={handleSubmitText}> Send </button>
-                
-    </div>
+
+
+
 
     {/* <h1>New CHAT</h1>
            <input type="text" value={NewFormChat.name} name="name" placeholder="New Chat" onChange={handleChange} />

@@ -592,11 +592,11 @@ SHOW BY ID */
   width: 110px;
   font-size: 15px;
   border: 1px solid #5a5958;
-  margin-left: 310px;
-  margin-bottom: 20px;
+  margin-left: 590px;
   border-radius: 2px;
   border: none;
-}
+  transform: translate(10%, -1620%);
+}  
 
 .bttn-update {
   box-shadow: white;
@@ -607,10 +607,7 @@ SHOW BY ID */
   border: 1px solid #5a5958;
   border-radius: 2px;
   border: none;
-  margin-bottom: 30px; 
-  margin-left: -420px;
-  position: absolute;
-  transform: translate(-10%, 340%);
+  transform: translate(-90%, 300%);
 }
 
 .join-bttn:hover, .buttons:hover, .bttn-update:hover, .bttn-remove:hover {
@@ -619,13 +616,10 @@ SHOW BY ID */
 }
 
 #close-chat {
-  margin-top: -20px;
-  margin-bottom: 0;
-  margin-left: 10px;
   border: none;
   padding: 4px;
+  transform: translate(5%, -180%);
 }
-
 
 .bttn-remove {
   box-shadow: white;
@@ -634,16 +628,17 @@ SHOW BY ID */
   width: 110px;
   font-size: 15px;
   border: 1px solid #5a5958;
-  margin-bottom: 30px; 
-  margin-left: 600px;
   border-radius: 2px;
   border: none;
+  transform: translate(550%, -200%);
 }
 
 .remove-text { 
-  margin-left: 550px;
+  margin-left: 570px;
   font-weight: lighter;
-  margin-bottom: -30px;
+  font-size: 15px;
+  position: absolute;
+  margin-top: -70px;
 }
 
 
@@ -723,4 +718,219 @@ SHOW BY ID */
 .grid-host-img {
   background-image: url("https://photo-assets.usopen.org/images/pics/large/f_bw_USTA1041310_20180903_Day8_DC101609.jpg");
   background-size: cover;
+}
+
+
+/* UPDATE PAGE */
+
+.grid-update {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 90px;
+  background: white;
+}
+
+.host-user-input1 {
+  border: none;
+  border-bottom: 2px solid #282c34;
+  font-size: 12px;
+  margin: 25px 0px -5px 120px;
+  height: 20px;
+  width: 70%;
+  text-align: center;
+  color: grey;
+}
+
+.descrip-title1 {
+  font-size: 15px;
+  letter-spacing: 1px;
+  color:#5a5958;
+  margin: 3px 0px -30px 20px
+}
+
+.user-pw-bttn1 {
+  margin-top: 40px;
+  margin-left: 270px;
+  margin-bottom: 20px;
+  box-shadow: white;
+  background-color: whitesmoke;
+  padding: 5px;
+  width: 110px;
+  font-size: 15px;
+  border: none;
+}
+
+
+
+.update-close-bttn {
+  margin-left: 15px;
+  border: none;
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.user-pw-bttn1:hover {
+  background-color: black;
+  color: white;
+}
+
+.update-title {
+  transform: translate(33%, 80%);
+  margin-bottom: -15px;
+  margin-top: -15px;
+}
+
+
+
+/* CHAT PAGE */
+
+
+.grid-mssg {
+  display: grid;
+  background-color: white;
+  grid-template-columns: 1fr;
+  margin-right: 300px;
+  margin-top: -40px;
+  margin-left: -30px;
+  height: 600px;
+  width: 110%;
+}
+
+.grid-newmssg{
+  background-color: #1f1f1f;
+  width: 80%;
+  margin-left: 75px;
+  height: 350px;
+  margin-top: -50px;
+  border-radius: 15px;
+}
+
+.grid-mssg-input{
+  width: 80%;
+  background-color: white;
+  /* border-radius: 15px; */
+  z-index: 3;
+  transform: translate(0%, -50%);
+  height: 250px;
+  margin-left: 75px;
+  margin-top: -20px;
+  background-color: #ededed;
+}
+
+
+.ref{
+  width: 70%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: white;
+  color: black;
+  margin-top: 2px;
+  margin-left: 75px;
+  text-transform: uppercase;
+  height: 8px;
+  font-size: 12px;
+}
+
+.mssg {
+  width: 70%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: white;
+  color: black;
+  margin-top: 8px;
+  margin-left: 75px;
+  text-transform: uppercase;
+  height: 50px;
+}
+
+.mssg:hover{
+  box-shadow: 1px 1px 8px #c5c5c5;
+}
+
+.user-send-bttn{
+  text-transform: uppercase;
+  transform: translate(-100%, 88%);
+  border: none;
+}
+
+#icon1 {
+  height: 2x;
+  width: 25px;
+}
+
+.mssg-title{
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mssg-title1{
+  color: black;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.host-user-input{
+ margin-left: 125px;
+ font-size: 10px;
+ height: 15px;
+ transform: translate(1%, -400%);
+}
+
+
+.user-mssg-bttn{
+  margin-top: 45px;
+  width: 80px;
+  font-size: 15px;
+  border: 1px solid #5a5958;
+  transform: translate(1%, -400%);
+  padding: 1px;
+  font-size: 12px;
+  opacity: 10px;
+  background-color: black;
+  color: white;
+}
+
+.new-chat{
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.mssg-new-input{
+  border: none;
+  border-bottom: 1px solid #282c34;
+  font-size: 15px;
+  width: 35%;
+  margin-top: 25px;
+  margin-bottom: -5px;
+  height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translate(85%, -250%);
+}
+
+.new-mssg-bttn{
+  margin-top: 45px;
+  margin-bottom: 25px;
+  width: 80px;
+  font-size: 15px;
+  border: 1px solid #5a5958;
+  transform: translate(180%, -320%);
+  padding: 1px;
+  font-size: 12px;
+  opacity: 10px;
+  background-color: black;
+  color: white;
+  width: 100px; 
 }
