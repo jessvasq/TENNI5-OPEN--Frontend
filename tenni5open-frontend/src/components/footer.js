@@ -11,6 +11,10 @@ function Footer () {
             <Link to='/about'>
                 <h2 className='foot-title'>ABOUT</h2>
             </Link>
+
+            <Link to='/user/register'>
+                <h2 className='foot-title'>REGISTER</h2>
+            </Link>
    </div>
     </>
   )

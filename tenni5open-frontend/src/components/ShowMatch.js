@@ -144,8 +144,9 @@ return (
           Date & Time: <input type="text" value={match.date} name="date" placeholder="date" onChange={handleChange} />
           Players: <input type="text" value={match.players} name="players" placeholder="players" onChange={handleChange} />
           Price: $<input type="text" value={match.price} name="price" placeholder="price" onChange={handleChange} /> */}
-      Check to add: <input type="checkbox" value={match.is_in_my_matches} name="is_in_my_matches" placeholder="Match's is_in_my_matches" onChange={handleChange} />
-      <input type="submit" value="Confirm" />
+      <h1 className='check'>Check to add:
+      <input type="checkbox" value={match.is_in_my_matches} name="is_in_my_matches" placeholder="Match's is_in_my_matches" onChange={handleChange} /> </h1>
+      <input className="confirm-join-bttn" type="submit" value="Confirm" />
     </form>
   }
   </div>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 const Logout = (props) => {
@@ -27,11 +28,27 @@ const Logout = (props) => {
   }
 
 return (
-  <section>
-  <form onSubmit={handleSubmit}>
-    <input type="submit" value="LOG OUT" />
-   </form>
-</section>
+//   <section>
+//   <form onSubmit={handleSubmit}>
+//     <input type="submit" value="LOG OUT" />
+//    </form>
+// </section>
+<div>
+  <div className='popup-container'>
+    <div className='popup-box'>
+            <h1 className='popup-h1'>SAD TO SEE YOU LEAVE</h1>
+            <h1 className='popup-des'> Are you sure? <br/> You won't receive new notifications if you do.</h1>
+            <form onSubmit={handleSubmit}>
+                 <input className='pop-bttn' type="submit" value="Yes, Log Out" />
+             </form>
+            <Link to='/tenni5open/matches'>
+            <button className='pop-bttn1'>Cancel
+              </button>
+            </Link>
+    </div>
+  </div>
+
+</div>
 
   );
 }

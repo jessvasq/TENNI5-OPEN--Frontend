@@ -40,18 +40,11 @@ const handleClose = (event) => {
                 <br/>
                 <br/>
                 <br/>
-                <br/>
-                <br/>
+               
 
             <div className='option'>
             <Link to='/about'>
                 <h2 className='nav-title'>ABOUT</h2>
-            </Link>
-            </div>
-
-            <div className='option'>
-            <Link to='/user/register'>
-                <h2 className='nav-title'>REGISTER</h2>
             </Link>
             </div>
 
@@ -74,11 +67,6 @@ const handleClose = (event) => {
             </Link>
             </div>
 
-            <div className='option'>
-            <Link to='/highlights'>
-                <h2 className='nav-title'>GRAND SLAMS HIGHLIGHTS</h2>
-            </Link>
-            </div>
 
             <div className='option'>
             <Link to='/equipment'>
@@ -91,6 +79,13 @@ const handleClose = (event) => {
                 <h2 className='nav-title'>HOW TO TENNIS</h2>
             </Link>
             </div>
+
+            <div className='option'>
+            <Link to='/highlights'>
+                <h2 className='nav-title'>GRAND SLAMS HIGHLIGHTS</h2>
+            </Link>
+            </div>
+
             <button id="close-menu" onClick={handleClose}>X</button>
             </>
        }

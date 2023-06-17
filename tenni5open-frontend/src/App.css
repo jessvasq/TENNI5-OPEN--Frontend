@@ -578,9 +578,8 @@ SHOW BY ID */
   width: 110px;
   font-size: 15px;
   border: 1px solid #5a5958;
-  margin-left: 310px;
-  margin-bottom: 20px;
   border-radius: 2px;
+  transform: translate(290%, -150%);
   border: none;
 }
 
@@ -610,11 +609,6 @@ SHOW BY ID */
   transform: translate(-90%, 300%);
 }
 
-.join-bttn:hover, .buttons:hover, .bttn-update:hover, .bttn-remove:hover {
-  background-color: black;
-  color: whitesmoke;
-}
-
 #close-chat {
   border: none;
   padding: 4px;
@@ -639,6 +633,30 @@ SHOW BY ID */
   font-size: 15px;
   position: absolute;
   margin-top: -70px;
+}
+
+
+.check {
+  font-size: 15px;
+  transform: translate(30%, -450%);
+}
+
+.confirm-join-bttn{
+  box-shadow: white;
+  background-color: whitesmoke;
+  padding: 5px;
+  width: 110px;
+  font-size: 15px;
+  border: 1px solid #5a5958;
+  border-radius: 2px;
+  transform: translate(350%, -600%);
+  border: none;
+
+}
+
+.join-bttn:hover, .buttons:hover, .bttn-update:hover, .bttn-remove:hover, .confirm-join-bttn:hover  {
+  background-color: black;
+  color: whitesmoke;
 }
 
 
@@ -814,16 +832,16 @@ SHOW BY ID */
   /* border-radius: 15px; */
   z-index: 3;
   transform: translate(0%, -50%);
-  height: 250px;
+  height: 300px;
   margin-left: 75px;
-  margin-top: -20px;
+  margin-top: 10px;
   background-color: #ededed;
 }
 
 
 .ref{
   width: 70%;
-  padding: 12px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -838,7 +856,7 @@ SHOW BY ID */
 
 .mssg {
   width: 70%;
-  padding: 12px;
+  padding: 10px;
   border: none;
   border-radius: 5px;
   outline: none;
@@ -870,6 +888,7 @@ SHOW BY ID */
   text-transform: uppercase;
   text-align: center;
   margin-top: 20px;
+  color: white;
 }
 
 .mssg-title1{
@@ -945,12 +964,100 @@ SHOW BY ID */
   width: 100%;
   background-color: black;
   opacity: 0.2;
-  height: 50px;
+  height: 35px;
 }
 
 .foot-title{
   margin-right: 20px;
   font-size: 15px;
   color: white;
-
 }
+
+
+.mssg-info{
+  background-color: #39649d;
+  width: 53%;
+  border-radius: 2px;
+  margin-left: 270px;
+  color: white;
+  font-size: 9px;
+  text-align: right;
+  padding: 5px;
+}
+
+.mssg-sent{
+  width: 52%;
+  background-color: #e3e3e3;
+  height: 20px;
+  padding: 8px;
+  margin-top: -20px;
+  margin-left: 270px;
+  font-size: 12px;
+}
+/* LOGOUT PAGE */
+
+.popup-container{
+  display: grid;
+  background-image: url("https://observerbd.com/2023/06/11/ob_1686418184.jpg");
+  background-size: cover;
+  grid-template-columns: 1fr;
+  margin-right: 300px;
+  margin-top: -40px;
+  margin-left: -30px;
+  height: 100vh;
+  width: 110%;
+}
+
+.popup-box{
+  background-color: white;
+  width: 30%;
+  height: 350px;
+  border-radius: 15px;
+  transform: translate(25%, 145%);
+}
+
+.popup-h1{
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 45px;
+  margin-top: 50px;
+}
+
+.popup-des{
+  font-weight: lighter;
+  font-size: 20px;
+  margin-top: -25px;
+}
+
+.pop-bttn{
+  margin-top: 40px;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  width: 130px;
+  font-size: 15px;
+  border: none;
+  display: flex;
+  text-transform: uppercase;
+  transform: translate(110%, -140%);
+}
+
+.pop-bttn1{
+  margin-top: 40px;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  width: 130px;
+  font-size: 15px;
+  border: none;
+  display: flex;
+  text-transform: uppercase;
+  transform: translate(250%, -350%);
+}
+
+.pop-bttn:hover, .pop-bttn1:hover {
+  box-shadow:  6px 6px 12px #bebebe,
+  -2px -2px 11px #ffffff;
+  background-color: #7d7d7d;
+}
+

@@ -185,22 +185,28 @@ return (
         <h1 className="mssg-title1">View All Messages:</h1><br/>
         <input className='host-user-input' type="text" value={conversationId}  placeholder="Reference Number" onChange={handleChangeConvo}/>
         <button className="user-mssg-bttn" onClick={handleOnClick}> SEARCH</button>
-    </div>
-    
+   
+
         {conversationId && ( 
             <>
+            <div className='grid-mssg-input'>
             {text.map((text) => (
              <div key={text.id}>
-              {text.user.username} <br/>
-              {text.user.email} <br/>
-              {text.message}
+              <h5 className="mssg-info">    
+              {text.user.username},
+              {text.user.email} <br/></h5> 
+              <h5 className="mssg-sent">   
+              {text.message}</h5> 
                 </div>
+
+                
         ))}
-            
+            </div>
             </>
+            
          )}
 
-
+</div>
 
 
     {/* <h1>New CHAT</h1>
