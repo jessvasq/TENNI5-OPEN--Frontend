@@ -7,7 +7,7 @@ const Logout = (props) => {
 //redirect to index once logged out 
 
   const redirectPage = () => {
-    window.location.href = '/tenni5open'
+    window.location.href = '/tenni5open/home'
   }
 
   const handleSubmit = async(e) => {

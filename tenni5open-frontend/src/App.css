@@ -45,7 +45,7 @@ h1.title {
 }
 
 .ball-img {
- /* animation: App-logo-spin infinite 30s linear; */
+ animation: App-logo-spin infinite 10s linear;
  height: 175px;
  width: 170px;
  z-index: 3;
@@ -171,7 +171,7 @@ nav.header {
   animation: slide-animation 30s infinite;
 }
 
-/* @keyframes slide-animation {
+@keyframes slide-animation {
   0% {
     transform: translateX(0);
   }
@@ -181,7 +181,7 @@ nav.header {
   100% {
     transform: translateX(0);
   }
-} */
+}
 
 .user-container{
   width: 100%;
@@ -1061,3 +1061,26 @@ SHOW BY ID */
   background-color: #7d7d7d;
 }
 
+
+.grid-about{
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 300px;
+  margin-top: 100px;
+  width: 70%;
+}
+
+.about-info{
+  text-align: justify;
+  margin: 0px 60px 0px 60px;
+}
+
+.about-subtitle{
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+.subtitle1{
+  text-align: left;
+  margin-left: 60px;
+}
