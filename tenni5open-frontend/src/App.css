@@ -1125,7 +1125,5 @@ SHOW BY ID */
 
 .title-notification{
   font-size: 18px;
-  padding-top: 25px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 25px 20px 0px 20px;
 }
