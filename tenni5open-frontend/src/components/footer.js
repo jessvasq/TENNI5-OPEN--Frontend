@@ -5,7 +5,7 @@ function Footer () {
   return (
     <>
    <div className='footer-menu'>
-            <Link to='/tenni5open/home'>
+            <Link to='/'>
                 <h2 className='foot-title'>HOME</h2>
             </Link>
             <Link to='/about'>

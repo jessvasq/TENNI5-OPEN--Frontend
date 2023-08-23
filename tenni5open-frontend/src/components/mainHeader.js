@@ -10,7 +10,7 @@ function MainHeader() {
         <Header />
         <img src= 'https://teamwitsken.com/wp-content/uploads/Tennis-Ball-Free-Download-PNG.png' className='ball-img1'></img>  
         <div className='home-title'>
-        <Link to='/tenni5open/home'>
+        <Link to='/'>
             <h1 className='main-header-title'>TENNI5 OPEN</h1>
         </Link>
         </div>
