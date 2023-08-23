@@ -13,7 +13,7 @@ function EquipmentIndex(props) {
           <div key={equipment.id} >
           </div>
           <a href={equipment.store} target="blank">
-          <img src={equipment.image} className='img-equipment'/></a> 
+          <img src={equipment.image} className='img-equipment' alt='equipment-img'/></a> 
         </div>
 
          {/* <div className='grid-equip-descrip'> */}

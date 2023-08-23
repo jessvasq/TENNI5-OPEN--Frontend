@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PopUp from './PopUp';
 
 function MatchIndex(props) {
 
@@ -58,6 +59,9 @@ const filteredMatch = props.matches.filter((match) => { //filter() iterates over
    <input className='search-bar' type="text" placeholder='SEARCH' value={searchQuery} onChange={handleChange} />
     {props.matches ? loaded() : loading()}
 
+    {<PopUp />}
+
+    
   </div>
   )
 }

@@ -60,8 +60,7 @@ function Main (props) {
       }
     
 
-    //UPDATE  *****FIX THIS******
-
+    //UPDATE 
     const updateMatch = async (match, id) => {
         // make PUT request to update match 
         try {
@@ -82,7 +81,7 @@ function Main (props) {
         }
       };
 
-    //DELETE  *****FIX THIS******
+    //DELETE 
     
     const deleteMatch = async (id) => {
       //make delete request to delete a match

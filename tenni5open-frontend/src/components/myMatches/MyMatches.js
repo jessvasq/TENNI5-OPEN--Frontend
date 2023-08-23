@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PopUp from '../PopUp';
+
 
 function MyMatchesIndex(props) {
 
@@ -56,7 +58,7 @@ const filteredMatch = props.matches.filter((myMatch) => { //filter() iterates ov
 
     <input className='search-bar' type="text" placeholder='ENTER YOUR LOCATION...' value={searchQuery} onChange={handleChange} />
     {props.matches ? loaded() : loading()}
-
+    {<PopUp />}
   </div>
   )
 }
