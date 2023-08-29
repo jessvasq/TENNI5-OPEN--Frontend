@@ -17,12 +17,10 @@ function About() {
 
     <h2  className='subtitle1'>Love Grand Slams? </h2>
     <p  className="about-info">All highlights from the present and past years would be avaiable for all. Tutorials from experiened players would be available to help grow your game, new or experienced all information is greatly appreciated. All new information received from the community  would benefit all players.  </p>
-
-
     
     <h4 className='about-subtitle'> Tenni5 Open welcomes everyone of all ages and skill level to not only try our app but most importantly to give tennis a try and join our tennis community. <br/> TENNIS ON!!! </h4>
-
-
+    
+    
 
      
     <p>
