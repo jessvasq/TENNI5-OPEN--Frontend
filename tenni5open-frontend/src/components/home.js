@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 function Home() {
 
@@ -8,9 +9,9 @@ function Home() {
     <>
     <div className='home-page'>
     <div className='h-title'> 
-    <h1 className='title'>TENNI5 <img src= 'https://teamwitsken.com/wp-content/uploads/Tennis-Ball-Free-Download-PNG.png' className='ball-img'></img>PEN</h1>
+      <h1 className='title'>TENNI5 <img src= '/imgs/tennis_07.png' className='ball-img'></img>PEN</h1>
     </div>
-      <img src="https://photo-assets.usopen.org/images/pics/large/c_USTA1035787_20180901_Ashe_2048x1152.jpg" className='backg-img'/>
+      <img src="/imgs/tennis_03.jpg" className='backg-img'/>
     </div>
     </>
   )
