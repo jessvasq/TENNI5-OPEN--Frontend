@@ -58,6 +58,7 @@ return (
   <section className='grid-register'>
     <div className='grid-welcome'>
       <h1 className="welcome-mssg">WELCOME BACK !</h1>
+      <img src= '/imgs/tennis_02.jpg' className="login-img"></img> 
     </div>
   <div className='grid-user'>
   <h1 className="login-title">SIGN IN</h1>

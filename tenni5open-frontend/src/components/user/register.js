@@ -55,11 +55,12 @@ function Register() {
     return (
     <section className='grid-register'>
     <div className='grid-welcome'>
-      <h1 className="welcome-mssg">WELCOME TO  TENNI5 OPEN</h1>
+      <img src= '/imgs/tennis_04.jpg' className="login-img"></img> 
     </div>
 
     <div className='grid-user'>
-    <h1 className="login-title">REGISTER</h1>
+    <h1 className="login-title">CREATE ACCOUNT</h1>
+    <p>Register to host your own tennis match and have access to upcoming tennis tournaments in your area.</p>
     <form onSubmit={handleSubmit}>
       <div className='username-input'>
       <input className='user-input' type="text" value={registerForm.username} name="username" placeholder="USERNAME" onChange={handleChange}/></div>
