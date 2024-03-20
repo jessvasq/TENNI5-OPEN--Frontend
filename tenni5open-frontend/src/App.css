@@ -157,7 +157,7 @@ nav.header {
   font-size: 25px;
   width: 100%;
   z-index: 5;
-  margin-left: 120px;
+  margin-left: 110px;
 }
 
 .main-header-title {
@@ -190,16 +190,16 @@ nav.header {
 
 .user-container{
   /* width: 100%; */
-  width: 10%;
+  width: 9%;
   justify-content:space-between;
   display: flex; 
-  padding-right: 25px;
+  margin-right: 15px;
 }
 
 .user-reg {
-  justify-content: center; 
+  /* justify-content: center;  */
   color: black;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .user-login {
@@ -334,7 +334,7 @@ form {
 }
 
 .login-title {
-  margin-top: 80px;
+  margin-top: 220px;
   font-size: 35px;
 }
 
@@ -382,8 +382,14 @@ form {
   grid-template-columns: 2fr 1fr;
   margin: 20px;
   margin-top: 100px;
+  color: #2b2b2b;
 }
 
+.grid-lesson-text h2{
+  text-align: left;
+  margin-left: 60px;
+  font-size: 20px;
+}
 .lesson-p {
  text-align: justify;
  margin: 0px 60px 0px 60px;
@@ -391,11 +397,14 @@ form {
 
 .subtitle {
   text-align: left;
+  margin-left: 60px;
+  color: grey;
+  font-size: 16px;
 }
 
 
 #how-to-header {
-  font-size: 35px;
+  font-size: 30px;
   margin-bottom: 15px;
 }
 
@@ -484,6 +493,11 @@ p {
   margin-top: 100px;
 }
 
+.search-container{
+  text-align: left;
+  margin-left: 60px;
+  font-size: 10px;
+}
 h1 {
   letter-spacing: 2px;
 }
@@ -746,9 +760,8 @@ SHOW BY ID */
 .grid-host{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 90px;
+  margin-left: 60px;
+  margin-right: 60px;
   height: 100vh;
   box-shadow:  6px 6px 12px #c7c7c7,
   -6px -6px 12px #ffffff;
@@ -766,11 +779,25 @@ SHOW BY ID */
   text-transform: uppercase;
 }
 
+.grid-host-input form {
+  width: 80%;
+  margin-top: 140px;
+}
+
 .grid-host-img {
   background-image: url("https://photo-assets.usopen.org/images/pics/large/f_bw_USTA1041310_20180903_Day8_DC101609.jpg");
   background-size: cover;
 }
 
+.user-pw-bttn2 {
+  background-color: black;
+  color: white;
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bolder;
+  margin-left: 120px;
+}
 
 /* UPDATE PAGE */
 
@@ -1112,65 +1139,81 @@ SHOW BY ID */
 
 .grid-about{
   display: grid;
-  grid-template-columns: 1fr;
-  margin-left: 300px;
-  margin-top: 100px;
-  width: 70%;
+  margin-top: 120px;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 16px;
+  line-height: 2rem;
+  color: #2b2b2b;
 }
 
 .about-info{
   text-align: justify;
-  margin: 0px 60px 0px 60px;
+  margin-top: 30px;
 }
 
 .about-subtitle{
   margin-top: 100px;
   font-size: 16px;
+  color: gray;
 }
 
 .subtitle1{
   text-align: left;
-  margin-left: 60px;
+  font-size: 22px;
 }
 
 
 /* popup container */
 .popupNotification{
-  background-color: #5a5958;
-  margin-top: 10%;
+  background-color: black;
+  margin-top: 8%;
+  padding: 10px;
+  border-radius: 10px;
   margin-left: 35%;
   margin-right: 35%;
-  color: white;
-  opacity: 0.5;
+  color: whitesmoke;
+  height: 180px;
+  position: absolute;
 }
 
 .user-new{
   justify-content: center; 
-  font-size: 21px;
-  text-decoration: underline;
+  font-size: 17px;
+  background-color: white;
+  padding: 9px;
+  color: black;
+  font-weight: lighter;
 }
 
 .user-signin{
   margin-left: 50px;
-  text-decoration: underline;
+  background-color: white;
+  padding: 10px;
+  color: black;
+  font-weight: normal;
 }
+
 .notification-bttns{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 10px;
-  margin-top: 20px;
+  font-size: 8px;
+ 
 }
 
 .x-close{
   margin-left: 400px;
-  margin-bottom: 25px;
   border: none;
-  padding: 5px;
-  background-color: rgb(255, 176, 176);
+  padding: 10px;
+  margin-bottom: -10px;
+  color: black;
+  position: relative;
+  margin-top: -60px;
 }
 
 .title-notification{
-  font-size: 18px;
-  padding: 25px 20px 0px 20px;
+  font-size: 16px;
+  padding: 15px 40px 0px 40px;
+  line-height: 2rem;
 }

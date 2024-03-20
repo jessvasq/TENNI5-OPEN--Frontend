@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
 
 function PopUp() {
 
@@ -22,7 +23,7 @@ function PopUp() {
    
          {!showPopUp && (
     <div className='popupNotification'>
-        <h1 className='title-notification'>Sign in or Register to view upcoming tennis tournaments & host new matches.</h1>
+        <h1 className='title-notification'>Sign in to host new matches and view upcoming tennis tournaments.</h1>
         <div className='notification-bttns'>
             <Link to='/user/register'>
                 <h2 className='user-new'>NEW USER</h2>
@@ -31,7 +32,9 @@ function PopUp() {
                 <h1 className='user-signin'>SIGN IN</h1>
             </Link>
         </div>
-        <button className='x-close' onClick={handleClose}>X</button>
+        <button className='x-close' onClick={handleClose}>
+            <CloseIcon />
+        </button>
     </div>
      )}
   </>

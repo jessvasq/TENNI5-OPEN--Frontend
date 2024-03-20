@@ -34,7 +34,7 @@ function LessonIndex(props) {
    <div className='grid-lesson'>
     <div className='grid-lesson-text'>
       <h1 id="how-to-header">HOW TO TENNIS</h1>
-      <h2 >TENNIS SERVE & RULES</h2>
+      <h2 >RULES</h2>
       <p className="lesson-p">A tennis match begins with the umpire doing a coin toss. The player who wins the toss can choose to serve, receive or pick the side from which they want to start the match.
           The serving player has to stand behind the baseline of his side of the tennis court and within the bounds of the centre mark and the sideline.
           For a successful serve, the server has to toss the ball up with his non-playing hand and hit it with the racket before it bounces. The ball needs to cross the net and land within the serving area which is marked on the diagonally opposite side of the court for it to be deemed a legal serve.

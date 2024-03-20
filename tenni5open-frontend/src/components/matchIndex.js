@@ -53,7 +53,7 @@ const filteredMatch = props.matches.filter((match) => { //filter() iterates over
 
 
   return (
-    <div>
+    <div className='search-container'>
     <h1 className='matches-title'>UPCOMING MATCHES</h1>
 
    <input className='search-bar' type="text" placeholder='SEARCH' value={searchQuery} onChange={handleChange} />

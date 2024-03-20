@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Header from './header';
 import Logout from './user/Logout';
-
+import LoginIcon from '@mui/icons-material/Login';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 function MainHeader() {
   return (
@@ -19,11 +20,15 @@ function MainHeader() {
         <div className='user-container'>
           {/* <div className='user-login'> */}
           <Link to='/user/login'>
-              <h1 className='user-reg'>SIGN IN</h1>
+          <h1 className='user-reg'>
+              <LoginIcon /> <br/>
+              SIGN IN</h1>
           </Link>
         {/* </div> */}
           <Link to='/user/logout'>
-            <h1 className='user-reg'>LOGOUT</h1>
+            <h1 className='user-reg'>
+              <LogoutIcon/><br/>
+              LOGOUT</h1>
           </Link>
         </div>
     

@@ -16,7 +16,6 @@ function CreateForm(props) {
     });
 
     //redirect to index once logged in 
-
     const redirectPage = () => {
         window.location.href = '/tenni5open/matches'
     }
@@ -82,7 +81,7 @@ function CreateForm(props) {
        </div>
        {/* My Matches: <input type="checkbox" value={newForm.is_in_my_matches} name="is_in_my_matches" placeholder="Match's is_in_my_matches" onChange={handleChange} /> */}
 
-       <input  className="user-pw-bttn"  type="submit" value="Create Match" />
+       <input  className="user-pw-bttn2"  type="submit" value="Create Match" />
     </form>
     </div>
     <div className='grid-host-img'>

@@ -53,7 +53,7 @@ const filteredMatch = props.matches.filter((myMatch) => { //filter() iterates ov
 
 
   return (
-    <div>
+    <div className='search-container'>
     <h1 className='matches-title'>MY MATCHES</h1>
 
     <input className='search-bar' type="text" placeholder='ENTER YOUR LOCATION...' value={searchQuery} onChange={handleChange} />
