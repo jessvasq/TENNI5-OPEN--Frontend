@@ -453,10 +453,11 @@ p {
 .yt-video-slams {
   border: none;
   border-radius: 12px;
-  height: 700px;
+  height: 300px;
   width: 400px;
   float: left;
   margin: 10px;
+  opacity: 0.9;
 }
 
 .yt-video-slams:hover {
@@ -513,11 +514,12 @@ h1 {
 
 .grid-matches {
   display: grid;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
   grid-template-columns: 1fr 2fr;
+  width: 70%;
 }
+
 
 
 .grid-matches-img {
@@ -525,134 +527,138 @@ h1 {
    margin-bottom: 0px;
 }
 
-.grid-matches-descrip {
-  background-color:#39649d;
-  position: static;
+.grid-matches-img1 {
+  background-color: black;
   margin-top: 15px;
-  margin-bottom: 10px;
-  margin-left: 20px;
+  color: white; 
+}
+
+.grid-matches-descrip {
+  background-color: #1f1f1f;
+  position: static;
+  margin-top: 14px;
   margin-right: -10px;
   color: white;
 }
 
 .match-location {
-  font-size: 25px;
+  font-size: auto;
   text-transform: uppercase;
-  margin-top: 25px;
+  text-align: center;
 }
 
 
 .match-details {
   font-size: 20px;
-  margin-top: 50%;
-  margin-left: 25%;
-  width: 100%;
-  width: 50%;
+  margin-top: 40%;
+  width: 70%;
+  margin-left: 15%;
+  font-weight: lighter;
 }
 
+.match-details1 {
+  font-size: 20px;
+  margin-top: 50%;
+  width: 70%;
+  margin-left: 12%;
+  text-align: center;
+  font-weight: lighter;
+}
 /* 
 SHOW BY ID */
 
 .matches-grid {
-  grid-auto-flow: column;
-  margin-top: 15px;
-  grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-rows: 0.25fr 1fr 1fr;
   margin-left: 30%;
   margin-right: 30%;
+  height: 100vh;
   text-align: justify;
+  position: absolute;
 }
 
 
 .match-host {
-  background-color: #282c34;
   border-radius: 50%;
-  height: 250px;
-  width: 250px;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-  margin-top: 30%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  margin-left: 50%;
+  height: 150px;
+  width: 150px;
+  transform: translate(190%, 50%); 
   color: white;
   background-color: black;
-  opacity: 0.5;
 }
 
 .match-description{
-  margin-top: -30%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 4px;
 }
 
 .matches-img {
-  height: 100%;
   width: 100%;
 }
 
 .descrip-title {
   font-size: 15px;
   letter-spacing: 1px;
-  color:#5a5958;
-  margin: -5px 0px -25px 0px
+  color: white;
+  font-weight: bolder;
 }
 
 .descrip-container{
-  margin: 30px;
   font-size: 13px;
-  color: black;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: white;
 }
 
 .description{
   font-weight: lighter;
-  margin-left: 20px;
+  margin-left: 80px;
 }
 
 
 .host-name{
   text-transform: uppercase;
- transform: translate(1%, 80%);
- text-align: center;
+ transform: translate(1%, 60%);
+  text-align: center;
+  font-weight: lighter;
+  font-size: auto;
 }
 
 
 .join-bttn {
-  box-shadow: white;
-  background-color: whitesmoke;
-  padding: 5px;
-  width: 110px;
-  font-size: 15px;
-  border: 1px solid #5a5958;
-  border-radius: 2px;
-  transform: translate(290%, -150%);
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bolder;
+  transform: translate(480%,-1250%);
+  position: absolute;
   border: none;
 }
 
 
 .buttons {
-  box-shadow: white;
-  background-color: whitesmoke;
-  padding: 5px;
   width: 110px;
   font-size: 15px;
-  border: 1px solid #5a5958;
-  margin-left: 590px;
-  border-radius: 2px;
+  transform: translate(430%, -880%);
+  background-color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bolder;
+  position: absolute;
   border: none;
-  transform: translate(10%, -1620%);
 }  
 
 .bttn-update {
-  box-shadow: white;
-  background-color: whitesmoke;
-  padding: 5px;
-  width: 110px;
-  font-size: 15px;
-  border: 1px solid #5a5958;
-  border-radius: 2px;
+  background-color: white;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: bolder;
+  position: absolute;
   border: none;
-  transform: translate(-90%, 300%);
+  transform: translate(120%, 50%);
 }
 
 #close-chat {
@@ -662,41 +668,51 @@ SHOW BY ID */
 }
 
 .bttn-remove {
-  box-shadow: white;
-  background-color: whitesmoke;
-  padding: 5px;
-  width: 110px;
-  font-size: 15px;
-  border: 1px solid #5a5958;
-  border-radius: 2px;
+  transform: translate(240%, -280%);
+  background-color: white;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: bolder;
+  position: absolute;
   border: none;
-  transform: translate(550%, -200%);
 }
 
-.remove-text { 
-  margin-left: 570px;
-  font-weight: lighter;
-  font-size: 15px;
-  position: absolute;
-  margin-top: -70px;
-}
 
 
 .check {
-  font-size: 15px;
-  transform: translate(30%, -450%);
+  font-size: 16px;
+  /* transform: translate(30%, -450%); */
+  color: black;
+  width: 60%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.confirmation_container{
+  /* height: 100px; */
+  background-color: white;
+  padding: 10px;
+  color: black;
+  text-align: center;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+  transform: translate(0%, -100%);
 }
 
 .confirm-join-bttn{
-  box-shadow: white;
-  background-color: whitesmoke;
+  background-color: black;
   padding: 5px;
   width: 110px;
   font-size: 15px;
-  border: 1px solid #5a5958;
   border-radius: 2px;
-  transform: translate(350%, -600%);
+  /* transform: translate(350%, -600%); */
   border: none;
+  color: white;
+  font-weight: bold;
 
 }
 
@@ -730,18 +746,21 @@ SHOW BY ID */
 
 .equip-title{
   margin-top: 110px;
+  text-align: left;
+  margin-left: 20px;
  }
 
  .grid-equip-descrip {
   transform: translate(45%, -400%);
   width: 80%;
-  font-size: 8px;
+  font-size: 12px;
   font-weight: lighter;
   z-index: 1;
   line-height: 2rem;
-  
+  font-weight: bold;
   color:rgba(0, 0, 0, 0.0);
   /* background-color: rgba(0, 0, 0, 0.2); */
+
  }
 
  .grid-equip-descrip:hover {

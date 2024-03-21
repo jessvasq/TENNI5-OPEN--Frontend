@@ -16,13 +16,12 @@ function EquipmentIndex(props) {
           <img src={equipment.image} className='img-equipment' alt='equipment-img'/></a> 
         </div>
 
-         {/* <div className='grid-equip-descrip'> */}
-         {/* <h1 className='grid-equip-descrip'>{equipment.category}</h1>  */}
+      
          <div>
          <a href={equipment.store} target="blank">
           <h1 className='grid-equip-descrip'> VISIT THE STORE <br/> {equipment.description}</h1></a> 
         </div>
-        {/* </div>   */}
+
      </>
      </div>
     ));
@@ -35,7 +34,7 @@ const loading = () => {
 
 return (
 <>
-<div>
+<div >
   <h1 className='equip-title'>EQUIPMENT</h1>
    {props.equipments ? loaded() : loading()}
 </div>

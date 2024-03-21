@@ -29,10 +29,11 @@ const filteredMatch = props.matches.filter((myMatch) => { //filter() iterates ov
     return filteredMatch.map((myMatch) => (
     <div className='grid-matches'>
 
-    <div className='grid-matches-img'>
+    <div className='grid-matches-descrip'>
       <h1  className='match-location'>{myMatch.location}</h1>
-      <h1 className='match-details'>HOST: {myMatch.username}</h1>
+      <h1 className='match-details1'>HOST: {myMatch.username}</h1>
     </div>
+    
 
     <div className='grid-matches-img'>
       <div key={myMatch.id} >
