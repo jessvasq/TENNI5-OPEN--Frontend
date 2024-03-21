@@ -658,17 +658,25 @@ SHOW BY ID */
   font-weight: bolder;
   position: absolute;
   border: none;
-  transform: translate(120%, 50%);
+  transform: translate(250%, 40%);
 }
 
 #close-chat {
   border: none;
   padding: 4px;
-  transform: translate(5%, -180%);
+  transform: translate(1500%, -1750%);
+  background-color: rgb(212, 55, 55);
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: bolder;
+  position: absolute;
+  border: none;
+  color: white;
 }
 
 .bttn-remove {
-  transform: translate(240%, -280%);
+  transform: translate(260%, 45%);
   background-color: white;
   padding: 10px;
   font-size: 12px;
@@ -713,8 +721,20 @@ SHOW BY ID */
   border: none;
   color: white;
   font-weight: bold;
-
 }
+
+.user-update-bttn {
+  background-color: black;
+  padding: 5px; 
+  width: 110px;
+  font-size: 15px;
+  border-radius: 2px;
+  transform: translate(20%, -800%);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
 
 .join-bttn:hover, .buttons:hover, .bttn-update:hover, .bttn-remove:hover, .confirm-join-bttn:hover  {
   background-color: black;
@@ -803,6 +823,13 @@ SHOW BY ID */
   margin-top: 140px;
 }
 
+.grid-host-input1 {
+  width: 90%;
+}
+
+
+
+
 .grid-host-img {
   background-image: url("https://photo-assets.usopen.org/images/pics/large/f_bw_USTA1041310_20180903_Day8_DC101609.jpg");
   background-size: cover;
@@ -825,8 +852,9 @@ SHOW BY ID */
   grid-template-columns: 1fr;
   margin-left: 30px;
   margin-right: 30px;
-  margin-top: 90px;
+  margin-top: 60px;
   background: white;
+  margin-bottom: 120px;
 }
 
 .host-user-input1 {
@@ -862,11 +890,13 @@ SHOW BY ID */
 
 
 .update-close-bttn {
-  margin-left: 15px;
+  margin-left: 400px;
   border: none;
-  padding: 5px;
+  padding: 12px;
   background-color: black;
-  color: white;
+  color: white; 
+  font-weight: bolder;
+  transform: translate(140%, -161%);
 }
 
 .user-pw-bttn1:hover {
@@ -887,13 +917,13 @@ SHOW BY ID */
 
 .grid-mssg {
   display: grid;
-  background-color: white;
+  /* background-color: white; */
   grid-template-columns: 1fr;
-  margin-right: 300px;
+  margin-left: -25px;
+  /* margin-right: 300px;
   margin-top: -40px;
-  margin-left: -30px;
-  height: 600px;
-  width: 110%;
+  margin-left: -30px; */
+  /* transform: translate(120%, -70%); */
 }
 
 .grid-newmssg{
@@ -927,7 +957,7 @@ SHOW BY ID */
   background-color: white;
   color: black;
   margin-top: 2px;
-  margin-left: 75px;
+  margin-left: 50px;
   text-transform: uppercase;
   height: 8px;
   font-size: 12px;
@@ -942,7 +972,7 @@ SHOW BY ID */
   background-color: white;
   color: black;
   margin-top: 8px;
-  margin-left: 75px;
+  margin-left: 50px;
   text-transform: uppercase;
   height: 50px;
 }
@@ -972,30 +1002,29 @@ SHOW BY ID */
 
 .mssg-title1{
   color: black;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 2px;
+  margin-top: 6px;
 }
 
 .host-user-input{
  margin-left: 125px;
- font-size: 10px;
- height: 15px;
- transform: translate(1%, -400%);
+ font-size: 12px;
+ height: 20px;
+ transform: translate(1%, -200%);
 }
 
 
 .user-mssg-bttn{
-  margin-top: 45px;
-  width: 80px;
-  font-size: 15px;
-  border: 1px solid #5a5958;
-  transform: translate(1%, -400%);
-  padding: 1px;
-  font-size: 12px;
-  opacity: 10px;
+  transform: translate(20%, -90%);
   background-color: black;
+  padding: 7px;
+  font-size: 12px;
+  border-radius: 5px;
+  font-weight: bolder;
+  position: absolute;
+  border: none;
   color: white;
 }
 
@@ -1003,34 +1032,32 @@ SHOW BY ID */
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .mssg-new-input{
   border: none;
-  border-bottom: 1px solid #282c34;
   font-size: 15px;
   width: 35%;
-  margin-top: 25px;
-  margin-bottom: -5px;
-  height: 20px;
+  margin-top: 35px;
+  height: 25px;
   text-align: center;
   text-transform: uppercase;
   transform: translate(85%, -250%);
 }
 
 .new-mssg-bttn{
-  margin-top: 45px;
-  margin-bottom: 25px;
   width: 80px;
-  font-size: 15px;
-  border: 1px solid #5a5958;
-  transform: translate(180%, -320%);
-  padding: 1px;
-  font-size: 12px;
-  opacity: 10px;
-  background-color: black;
-  color: white;
+  transform: translate(180%, -120%);
+  padding: 5px;
+  color: black;
   width: 100px; 
+  background-color: white;
+  font-size: 15px;
+  border-radius: 5px; 
+  position: absolute;
+  border: none;
+  font-weight: bolder;
 }
 
 

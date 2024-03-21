@@ -19,6 +19,12 @@ function NewChats(props) {
         setNewFormChat({ ...NewFormChat, [event.target.name]: event.target.value });
     };
     
+
+    const closeChat = (event) => {
+        event.preventDefault()
+        setShowContactForm(false);
+      }
+
 //////////////////////SEND NEW TEXT ///////////////////////////
     const [ newText, setNewText] = useState({
         message: "",
@@ -95,18 +101,6 @@ function NewChats(props) {
         setNewText({ ...newText, [event.target.name]: event.target.value });
     };
 
-
-
-    //   const loaded = () => {
-    //     <h1>Chat History</h1>
-    //     return(
-    //     props.texts.map(text => (
-    //         <div key={text.id}>
-    //             {text.message}
-    //             </div>
-    //          ))
-    //     )
-    //   };
     
 ///////////////////////////////////////////////////////////////////////////
       return (

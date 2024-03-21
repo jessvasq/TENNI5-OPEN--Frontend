@@ -153,13 +153,13 @@ const handleSubmit = (event) => {
 return (
     <>
 <div className='grid-mssg'>
-    
+ 
     <h1 className="new-chat">New CHAT</h1>
 
             {!conversationId && (
             <div>
            <input className='mssg-new-input' type="text" value={NewFormChat.name} name="name" placeholder="Subject" onChange={handleChange} />
-           <button className="new-mssg-bttn" onClick={handleSubmit}> Create New Chat </button>
+           <button className="new-mssg-bttn" onClick={handleSubmit}> Create Chat </button>
             </div>
            )}
 

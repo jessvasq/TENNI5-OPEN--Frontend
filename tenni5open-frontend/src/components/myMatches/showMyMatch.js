@@ -93,19 +93,23 @@ return (
   <br/>
 
 <button className="buttons" onClick={openChat}>Contact Host</button>
-   {showContactForm && 
-    <Chat /> 
-   }
-  <button id="close-chat" onClick={closeChat}> Close Chat X</button>
 
+   {showContactForm && 
+   <div>
+    <Chat /> 
+    <button id="close-chat" onClick={closeChat}>X</button> </div>
+   }
+
+  <button className="bttn-remove" onClick={removeMatch}>DELETE MATCH</button>
   <button className="bttn-update" onClick={editMatch}>UPDATE</button>
     {/* {showupdateForm && <UpdateForm matches={match} updateMatch={props.updateMatch} />} */}
     <div className='grid-update'>
     { showupdateForm &&
-        <div className='grid-host-input'>
+        <div className='grid-host-input1'>
            <h1 className="update-title">UPDATE MATCH</h1>
     <div className='email-input'>
         <form onSubmit={handleSubmit}>
+        <button className ="update-close-bttn " onClick={handleClose}>X</button>
         <h2 className='descrip-title1'>DESCRIPTION:</h2> 
           <input className='host-user-input1' type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
         <h2 className='descrip-title1'>DATE: </h2> 
@@ -114,16 +118,13 @@ return (
           <input  className='host-user-input1' type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
         <h2 className='descrip-title1'>PRICE: $ </h2> 
           <input className='host-user-input1' type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
-          <input  className="user-pw-bttn1" type="submit" value="Update Match"/>
-          <button className ="update-close-bttn " onClick={handleClose}>Cancel X</button>
+          <input  className="user-update-bttn" type="submit" value="Update Match"/>
         </form> 
     </div>
     </div>
     
     }
  </div>
-
-  <button className="bttn-remove" onClick={removeMatch}>DELETE MATCH</button>
  </div>
 </div>
 </div>
