@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 
@@ -7,7 +6,7 @@ const Logout = (props) => {
 //redirect to index once logged out 
 
   const redirectPage = () => {
-    window.location.href = '/tenni5open/home'
+    window.location.href = '/'
   }
 
   const handleSubmit = async(e) => {
@@ -28,11 +27,6 @@ const Logout = (props) => {
   }
 
 return (
-//   <section>
-//   <form onSubmit={handleSubmit}>
-//     <input type="submit" value="LOG OUT" />
-//    </form>
-// </section>
 <div>
   <div className='popup-container'>
     <div className='popup-box'>

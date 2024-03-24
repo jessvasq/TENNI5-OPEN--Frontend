@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Register from "./register";
 import { Link } from "react-router-dom";
 
-const Login = (props) => {
+const Login = () => {
 
 ///update thiss!
   const [loginForm, setloginForm] = useState({
-    username: "",
+    // username: "",
     email: "", 
     password: "",
   });
@@ -18,7 +18,6 @@ const Login = (props) => {
   };
 
 //redirect to index once logged in 
-
   const redirectPage = () => {
     window.location.href = '/tenni5open/matches'
   }
@@ -26,6 +25,7 @@ const Login = (props) => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     
+    try {
     
     const response = await fetch("http://localhost:8000/user/login", {
         method: 'POST', 
@@ -33,24 +33,30 @@ const Login = (props) => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            username: loginForm.username, 
+            // username: loginForm.username, 
             email: loginForm.email, 
             password: loginForm.password
         }),
         credentials: 'include' //includes cookies in the request
-    }
-    );
+    });
 
     if (response.ok) {
         redirectPage()
+      } else { // if the credentials do not match, show an alert
+        alert('Invalid credentials')
       }
     
+
     setloginForm({
-        username: "",
+        // username: "",
         email: "",
         password: ""
     });
-}
+} catch (error) {
+  console.log(error, 'error')
+  alert('An error occurred during login. Please try again.')
+  }
+};
 
 
 
@@ -63,7 +69,7 @@ return (
   <div className='grid-user'>
   <h1 className="login-title">SIGN IN</h1>
   <form onSubmit={handleSubmit}>
-    <div className='username-input'>
+    {/* <div className='username-input'>
     <input className='user-input'
       type="text"
       value={loginForm.username}
@@ -71,7 +77,7 @@ return (
       placeholder="USERNAME"
       onChange={handleChange}
     />
-    </div>
+    </div> */}
 
     <div className='email-input'>
     <input  className='user-input'
