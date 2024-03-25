@@ -154,35 +154,24 @@ return (
     <>
 <div className='grid-mssg'>
  
-    <h1 className="new-chat">New CHAT</h1>
+    {/* <h1 className="new-chat">New CHAT</h1> */}
 
             {!conversationId && (
             <div>
-           <input className='mssg-new-input' type="text" value={NewFormChat.name} name="name" placeholder="Subject" onChange={handleChange} />
+           <input className='mssg-new-input' type="text" value={NewFormChat.name} name="name" placeholder="New Message: Subject" onChange={handleChange} />
            <button className="new-mssg-bttn" onClick={handleSubmit}> Create Chat </button>
             </div>
            )}
 
-           {/* {conversationId && (
-            <div>
-                <h2>Keep this number for your records: </h2>
-                {conversationId}
+           {conversationId && (
+            <div className="convo">
+                <p>Use this reference number to contact the Host: </p>
+                <p className="conversation-id">{conversationId}</p> 
             </div>
-           )} */}
+           )}
 
-
-<div className='grid-newmssg'>
-        <h1 className="mssg-title">REPLY / Message</h1>
-        <input className='ref' type="text" value={newText.conversation} name="conversation" placeholder="Send to: Enter Reference Number" onChange={handleChangeText} />
-        <input className='mssg' type="text" value={newText.message} name="message" placeholder="type your message" onChange={handleChangeText} />
-        <button className="user-send-bttn" onClick={handleSubmitText}> 
-        <img src="https://static.thenounproject.com/png/1015120-200.png"  id="icon1"></img>
-        </button>
-                
-    </div>
-    
 <div className='grid-mssg-input'>
-        <h1 className="mssg-title1">View All Messages:</h1><br/>
+        <h1 className="mssg-title1">View All Messages</h1><br/>
         <input className='host-user-input' type="text" value={conversationId}  placeholder="Reference Number" onChange={handleChangeConvo}/>
         <button className="user-mssg-bttn" onClick={handleOnClick}> SEARCH</button>
    
@@ -193,13 +182,12 @@ return (
             {text.map((text) => (
              <div key={text.id}>
               <h5 className="mssg-info">    
-              {text.user.username},
-              {text.user.email} <br/></h5> 
+              {text.user.username}
+              {/* {text.user.email} <br/> */}
+              </h5> 
               <h5 className="mssg-sent">   
               {text.message}</h5> 
                 </div>
-
-                
         ))}
             </div>
             </>
@@ -209,9 +197,13 @@ return (
 </div>
 
 
-    {/* <h1>New CHAT</h1>
-           <input type="text" value={NewFormChat.name} name="name" placeholder="New Chat" onChange={handleChange} />
-           <button onClick={handleSubmit}> + New Chat </button> */}
+<div className='grid-newmssg'>
+        <input className='ref' type="text" value={newText.conversation} name="conversation" placeholder="Send to: Enter Reference Number" onChange={handleChangeText} />
+        <input className='mssg' type="text" value={newText.message} name="message" placeholder="type your message" onChange={handleChangeText} />
+        <button className="user-send-bttn" onClick={handleSubmitText}> 
+        <img src="https://static.thenounproject.com/png/1015120-200.png"  id="icon1"></img>
+        </button>
+    </div>
     <div>
       
 

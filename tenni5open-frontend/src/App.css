@@ -640,7 +640,7 @@ SHOW BY ID */
 .buttons {
   width: 110px;
   font-size: 15px;
-  transform: translate(430%, -880%);
+  transform: translate(460%, -860%);
   background-color: white;
   padding: 10px;
   font-size: 16px;
@@ -664,7 +664,7 @@ SHOW BY ID */
 #close-chat {
   border: none;
   padding: 4px;
-  transform: translate(1500%, -1750%);
+  transform: translate(1690%, 40%);
   background-color: rgb(212, 55, 55);
   padding: 10px;
   font-size: 15px;
@@ -815,7 +815,6 @@ SHOW BY ID */
   margin-bottom: -5px;
   height: 20px;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .grid-host-input form {
@@ -920,6 +919,7 @@ SHOW BY ID */
   /* background-color: white; */
   grid-template-columns: 1fr;
   margin-left: -25px;
+  margin-top: 20px;
   /* margin-right: 300px;
   margin-top: -40px;
   margin-left: -30px; */
@@ -928,43 +928,40 @@ SHOW BY ID */
 
 .grid-newmssg{
   background-color: #1f1f1f;
-  width: 80%;
-  margin-left: 75px;
-  height: 350px;
-  margin-top: -50px;
-  border-radius: 15px;
+  /* width: 80%; */
+  /* margin-left: 75px; */
+  height: 75%;
+  /* margin-top: -50px; */
+  /* border-radius: 15px; */
 }
 
 .grid-mssg-input{
-  width: 80%;
+  /* width: 80%; */
   background-color: white;
   /* border-radius: 15px; */
-  z-index: 3;
-  transform: translate(0%, -50%);
-  height: 300px;
-  margin-left: 75px;
-  margin-top: 10px;
-  background-color: #ededed;
+  /* z-index: 3; */
+  /* transform: translate(0%, -50%); */
+  height: auto;
+  /* margin-left: 75px; */
+  /* margin-top: 10px; */
 }
 
 
 .ref{
-  width: 70%;
+  width: 85%;
   padding: 10px;
   border: none;
   border-radius: 5px;
   outline: none;
-  background-color: white;
   color: black;
-  margin-top: 2px;
-  margin-left: 50px;
-  text-transform: uppercase;
-  height: 8px;
+  margin-top: 1px;
+  margin-left: 64px;
+  height: 4px;
   font-size: 12px;
 }
 
 .mssg {
-  width: 70%;
+  width: 85%;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -972,9 +969,8 @@ SHOW BY ID */
   background-color: white;
   color: black;
   margin-top: 8px;
-  margin-left: 50px;
-  text-transform: uppercase;
-  height: 50px;
+  margin-left: 64px;
+  height: 20px;
 }
 
 .mssg:hover{
@@ -983,7 +979,7 @@ SHOW BY ID */
 
 .user-send-bttn{
   text-transform: uppercase;
-  transform: translate(-100%, 88%);
+  transform: translate(1420%, -110%);
   border: none;
 }
 
@@ -991,21 +987,30 @@ SHOW BY ID */
   height: 2x;
   width: 25px;
 }
-
-.mssg-title{
-  font-size: 10px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 20px;
-  color: white;
+.convo{
+  display: flex;
 }
+.conversation-id{
+  font-size: 16px;
+  margin-left: 10px;
+  color: #1f1f1f;
+  background-color: white;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+/* .mssg-title{
+  font-size: 12px;
+  text-align: left;
+  margin-top: 2px;
+  margin-left: 70px;
+  color: white;
+} */
 
 .mssg-title1{
-  color: black;
-  font-size: 12px;
-  text-transform: uppercase;
+  color: grey;
+  font-size: 14px;
   text-align: center;
-  margin-top: 6px;
+  margin-top: 12px;
 }
 
 .host-user-input{
@@ -1029,7 +1034,7 @@ SHOW BY ID */
 }
 
 .new-chat{
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
@@ -1038,12 +1043,11 @@ SHOW BY ID */
 .mssg-new-input{
   border: none;
   font-size: 15px;
-  width: 35%;
-  margin-top: 35px;
+  /* width: 35%; */
+  /* margin-top: 35px; */
   height: 25px;
   text-align: center;
-  text-transform: uppercase;
-  transform: translate(85%, -250%);
+  transform: translate(85%, -120%);
 }
 
 .new-mssg-bttn{
@@ -1081,23 +1085,23 @@ SHOW BY ID */
 
 
 .mssg-info{
-  background-color: #39649d;
+  background-color:black;
   width: 53%;
   border-radius: 2px;
-  margin-left: 270px;
-  color: white;
-  font-size: 9px;
-  text-align: right;
+  margin-left: 255px;
+  font-size: 12px;
   padding: 5px;
 }
 
 .mssg-sent{
-  width: 52%;
-  background-color: #e3e3e3;
+  /* width: 52%; */
+  background-color: white;
   height: 20px;
   padding: 8px;
   margin-top: -20px;
-  margin-left: 270px;
+  color: black;
+  margin-left: 255px;
+  /* margin-left: 270px; */
   font-size: 12px;
 }
 /* LOGOUT PAGE */
