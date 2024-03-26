@@ -105,7 +105,6 @@ return (
         <h2 className='description'>{match.location}</h2> 
         <h2 className='descrip-title'>DESCRIPTION:</h2> 
         <h2 className='description'>{match.description}</h2> 
-        {/* <h2>Username: {match.username}</h2>  */}
         <h2 className='descrip-title'>DATE: </h2> 
         <h2 className='description'>{match.date}</h2> 
         <h2 className='descrip-title'>PLAYERS: </h2> 
@@ -115,35 +114,9 @@ return (
         <h2 className='descrip-title'>PRICE: </h2> 
         <h2 className='description'> ${match.price}</h2> 
     </div>
-
-  {/* <button id="delete" onClick={removeMatch}>Delete</button>
-
-
-  <button id="update" onClick={editMatch}>UPDATE</button> */}
-    {/* {showupdateForm && <UpdateForm matches={match} updateMatch={props.updateMatch} />} */}
-    {/* {showupdateForm && 
-        <form onSubmit={handleSubmit}>
-          LOCATION: <input type="text" value={updateForm.location} name="location" placeholder="location" onChange={handleChange} />
-          <input type="text" value={updateForm.description} name="description" placeholder="description" onChange={handleChange} />
-          DATE: <input type="text" value={updateForm.date} name="date" placeholder="date" onChange={handleChange} />
-          PLAYERS: <input type="text" value={updateForm.players} name="players" placeholder="players" onChange={handleChange} />
-          PRICE: $<input type="text" value={updateForm.price} name="price" placeholder="price" onChange={handleChange} />
-          <input type="submit" value="Update Match"/>
-          <button onClick={handleClose}>X</button>
-        </form> 
-    } */}
-
   <button className="join-bttn" onClick={showAdd}>JOIN MATCH</button>
     {showAddForm && 
       <form onSubmit={handleAdd}>
-          {/* <input type="text" value={match.image} name="image" placeholder="image" onChange={handleChange} />
-          <input type="text" value={match.host_name.username} name="host_name" placeholder="host_name" onChange={handleChange} />
-          <input type="text" value={match.skill_level} name="skill_level" placeholder="skill_level" onChange={handleChange} />
-          Location: <input type="text" value={match.location} name="location" placeholder="location" onChange={handleChange} />
-          Description: <input type="text" value={match.description} name="description" placeholder="description" onChange={handleChange} />
-          Date & Time: <input type="text" value={match.date} name="date" placeholder="date" onChange={handleChange} />
-          Players: <input type="text" value={match.players} name="players" placeholder="players" onChange={handleChange} />
-          Price: $<input type="text" value={match.price} name="price" placeholder="price" onChange={handleChange} /> */}
       <div className='confirmation_container'>
         <h1 className='check'>Check to add:
         <input type="checkbox" value={match.is_in_my_matches} name="is_in_my_matches" placeholder="Match's is_in_my_matches" onChange={handleChange} /> </h1>

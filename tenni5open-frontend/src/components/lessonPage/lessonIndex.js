@@ -69,7 +69,7 @@ function LessonIndex(props) {
           All women’s singles and doubles events - in Grand Slams and on the WTA Tour - are best-of-three sets matches.</p>
     </div>
 <div className='grid-lesson-videos'> 
- <h1>TUTORIALS</h1>
+ <h1 className='tutorials-title'>TUTORIALS</h1>
        {props.lessons ? loaded() : loading()}
 </div>
 

@@ -69,16 +69,6 @@ return (
   <div className='grid-user'>
   <h1 className="login-title">SIGN IN</h1>
   <form onSubmit={handleSubmit}>
-    {/* <div className='username-input'>
-    <input className='user-input'
-      type="text"
-      value={loginForm.username}
-      name="username"
-      placeholder="USERNAME"
-      onChange={handleChange}
-    />
-    </div> */}
-
     <div className='email-input'>
     <input  className='user-input'
       type="text"
@@ -102,7 +92,6 @@ return (
     <input className="user-pw-bttn" type="submit" value="LOG IN" />
    </form>
    <div>
-   {/* <input className="new-user" type="submit" value="NEW USER" /> */}
    <Link to='/user/register'>
       <h2 className='new-user'>NEW USER</h2>
    </Link>

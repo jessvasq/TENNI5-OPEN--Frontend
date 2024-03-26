@@ -79,8 +79,6 @@ function CreateForm(props) {
        <div className='email-input'>
             <input className='host-user-input' type="text" value={newForm.price} name="price" placeholder="Match's price" onChange={handleChange} />
        </div>
-       {/* My Matches: <input type="checkbox" value={newForm.is_in_my_matches} name="is_in_my_matches" placeholder="Match's is_in_my_matches" onChange={handleChange} /> */}
-
        <input  className="user-pw-bttn2"  type="submit" value="Create Match" />
     </form>
     </div>

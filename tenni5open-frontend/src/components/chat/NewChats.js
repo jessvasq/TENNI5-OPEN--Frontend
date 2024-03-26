@@ -118,13 +118,6 @@ function NewChats(props) {
                 <button onClick={handleSubmitText}> SEND </button>
             </div>
            )}
-            {/* <div>
-            Search: <input type="text" value={searchConvo}  placeholder="conversation id" onChange={handleSearch}/>
-            <button onClick={handleSubmitSearch}> SEARCH </button>
-
-
-            <h1>Chat History</h1>
-            {props.texts ? loaded() : loading()} */}
             {props.texts.map(text => (
                 <div key={text.id}>
                     {text.message}

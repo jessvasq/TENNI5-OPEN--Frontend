@@ -17,8 +17,6 @@ function VideosIndex(props) {
             ></iframe>
           </div>
          <div key={video.id} >
-         {/* <h1>{video.title}</h1>
-         <h1>{video.description}</h1> */}
          </div>
          </>
         ));
