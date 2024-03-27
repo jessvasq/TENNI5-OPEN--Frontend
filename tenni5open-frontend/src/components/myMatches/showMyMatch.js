@@ -102,7 +102,6 @@ return (
 
   <button className="bttn-remove" onClick={removeMatch}>DELETE MATCH</button>
   <button className="bttn-update" onClick={editMatch}>UPDATE</button>
-    {/* {showupdateForm && <UpdateForm matches={match} updateMatch={props.updateMatch} />} */}
     <div className='grid-update'>
     { showupdateForm &&
         <div className='grid-host-input1'>

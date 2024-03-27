@@ -493,6 +493,7 @@ p {
   height: 20px;
   padding: 4px;
   text-align: right;
+  position: fixed;
 }
 
 .matches-title {

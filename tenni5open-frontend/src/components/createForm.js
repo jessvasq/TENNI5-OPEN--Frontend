@@ -62,7 +62,7 @@ function CreateForm(props) {
             <input className='host-user-input' type="text" value={newForm.location} name="location" placeholder="location" onChange={handleChange} />
        </div>
        <div className='email-input'>
-            <input  className='host-user-input' type="date" value={newForm.date} name="date" placeholder="date" onChange={handleChange} />
+            <input  className='host-user-input' type="text" value={newForm.date} name="date" placeholder="date" onChange={handleChange} />
        </div>
        <div className='email-input'>
              <input className='host-user-input' type="text" value={newForm.username} name="username" placeholder="username" onChange={handleChange} />

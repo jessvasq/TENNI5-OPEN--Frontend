@@ -56,7 +56,7 @@ const filteredMatch = props.matches.filter((match) => { //filter() iterates over
     <div className='search-container'>
     <h1 className='matches-title'>UPCOMING MATCHES</h1>
 
-   <input className='search-bar' type="text" placeholder='SEARCH' value={searchQuery} onChange={handleChange} />
+   <input className='search-bar' type="text" placeholder='SEARCH BY LOCATION' value={searchQuery} onChange={handleChange} />
     {props.matches ? loaded() : loading()}
 
     {<PopUp />}

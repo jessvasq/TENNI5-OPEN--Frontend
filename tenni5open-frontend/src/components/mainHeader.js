@@ -18,7 +18,6 @@ function MainHeader() {
         </div>
 
         <div className='user-container'>
-          {/* <div className='user-login'> */}
           <Link to='/user/login'>
           <h1 className='user-reg'>
               <LoginIcon /> <br/>
